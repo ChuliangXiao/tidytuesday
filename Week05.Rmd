@@ -9,3 +9,54 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Load library  
+```{r message = F, warning = F}
+library(tidyverse)
+library(Hmisc)
+library(maps)
+```
+
+### Read in data  
+```{r}
+dfASC <- read_csv("data/acs2015_county_data.csv")
+```
+
+### Counties
+```{r}
+cnty <- map_data("county")
+```
+
+
+### Plot counties
+```{r}
+ggplot(cnty, aes(long, lat, group = group)) + 
+  geom_polygon(aes(fill = region), 
+               show.legend = FALSE, 
+               colour = rgb(1, 1, 1, 0.2)) + 
+  coord_quickmap()+
+  theme_void()
+```
+
+### `choroplethr` framework  
+```{r}
+# https://bookdown.org/rdpeng/RProgDA/mapping.html#mapping-us-counties-and-states
+# https://github.com/trulia/choroplethr
+library(choroplethr)
+library(choroplethrMaps)
+data(df_pop_county)
+```
+
+
+### Test 
+```{r}
+# https://twitter.com/nlj/status/991149834085289984
+mean_commute <- dfASC %>%
+  select(CensusId, MeanCommute) %>%
+  rename(region = CensusId, value = MeanCommute)
+
+choro               <- CountyChoropleth$new(mean_commute)
+choro$title         <- "Mean Commute Times by County"
+choro$ggplot_scale  <- scale_fill_brewer(name = "Time", palette = 2, drop = F)
+choro$render()
+```
+
