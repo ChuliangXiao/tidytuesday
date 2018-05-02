@@ -17,7 +17,7 @@ library(maps)
 ```
 
 ### Read in data  
-```{r}
+```{r message = F, warning = F}
 dfASC <- read_csv("data/acs2015_county_data.csv")
 ```
 
@@ -26,19 +26,26 @@ dfASC <- read_csv("data/acs2015_county_data.csv")
 cnty <- map_data("county")
 ```
 
-
+## plot  
 ### Plot counties
-```{r}
-ggplot(cnty, aes(long, lat, group = group)) + 
+```{r message = F, warning = F, fig.width = 10}
+p <- ggplot(cnty, aes(long, lat, group = group)) + 
   geom_polygon(aes(fill = region), 
                show.legend = FALSE, 
                colour = rgb(1, 1, 1, 0.2)) + 
   coord_quickmap()+
   theme_void()
+p
 ```
 
-### `choroplethr` framework  
-```{r}
+### plotly  
+```{r message = F, warning = F, fig.width = 10}
+library(plotly)
+#ggplotly(p)
+```
+
+## `choroplethr` framework  
+```{r message = F, warning = F}
 # https://bookdown.org/rdpeng/RProgDA/mapping.html#mapping-us-counties-and-states
 # https://github.com/trulia/choroplethr
 library(choroplethr)
