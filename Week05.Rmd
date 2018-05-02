@@ -21,22 +21,85 @@ library(maps)
 dfASC <- read_csv("data/acs2015_county_data.csv")
 ```
 
-### Counties
+### County Map data
 ```{r}
-cnty <- map_data("county")
+Upper1  <- function(x){
+  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+  x
+}
+
+cnty <- map_data("county")%>%
+  as_tibble()%>%
+  rename(State = region, County = subregion) %>%
+  mutate(County = str_replace(County, "Dona Ana", "Doña Ana")) 
+
+dfASC <- dfASC%>%
+  select(CensusId:County, MeanCommute)
+
+
+head(cnty)
+```
+
+### Join Map and ASC
+```{r}
+# cnty has 48 states and DC
+# ASC has all 50 States, DC and PR
+cntyASC <- left_join(cnty, dfASC, by = c("State", "County"))
+```
+
+### Find out missing counties
+```{r}
+cntyMiss <- cntyASC%>%
+  filter(is.na(MeanCommute))%>%
+  group_by(State, County)%>%
+  summarise(Missing = 1)
+
+cntyMiss %>% as.data.frame()
+# https://en.wikipedia.org/wiki/De_Kalb,_Missouri
+# https://en.wikipedia.org/wiki/DeKalb_County,_Alabama
+
+```
+
+### Number of counties in each state   
+```{r}
+# Number of counties in each state
+numMap <- cnty %>%
+  distinct(State, County) %>%
+  group_by(State) %>%
+  summarise(count = n())
+
+numASC <- dfASC %>%
+  group_by(State) %>%
+  summarise(count = n())  
+
+numCnty <- inner_join(numMap, numASC, by = "State") %>%
+  mutate(diff = count.x - count.y)
+
+numMap1 <- cnty %>%
+  distinct(State, County) %>%
+  filter(State == "virginia")
+
+numASC1 <- dfASC %>%
+  group_by(State) %>%
+  filter(State == "virginia")
 ```
 
 ## plot  
 ### Plot counties
 ```{r message = F, warning = F, fig.width = 10}
 p <- ggplot(cnty, aes(long, lat, group = group)) + 
-  geom_polygon(aes(fill = region), 
-               show.legend = FALSE, 
-               colour = rgb(1, 1, 1, 0.2)) + 
+  geom_polygon(data = cntyASC, aes(fill = MeanCommute), 
+ #              show.legend = FALSE, 
+               colour = "grey") + 
   coord_quickmap()+
-  theme_void()
+  scale_fill_distiller(palette = "Spectral")+
+  theme_void()+
+  labs(title = "Commute Time (min)",
+       caption = "Cource: US Census Demogrpahic Data 2015")
 p
 ```
+
+
 
 ### plotly  
 ```{r message = F, warning = F, fig.width = 10}
@@ -54,7 +117,7 @@ data(df_pop_county)
 ```
 
 
-### Test 
+### Commute Time 
 ```{r}
 # https://twitter.com/nlj/status/991149834085289984
 mean_commute <- dfASC %>%
