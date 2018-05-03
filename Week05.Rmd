@@ -48,7 +48,7 @@ cntyASC <- left_join(cnty, dfASC, by = c("State", "County"))
 
 stASC   <- dfASC %>%
   group_by(State) %>%
-  summarise(MeanCommute = mean(MeanCommute))
+  summarise(MeanCommute = sum(MeanCommute * TotalPop)/sum(TotalPop))
 ```
 
 ### Find out missing counties
@@ -110,10 +110,42 @@ choro$render()
 
 ```
 
-### `statebin`
+### `statebins`
 ```{r message = F, warning = F, fig.width = 10}
-
+library(statebins)
 ```
+
+### `rcstatebin`
+```{r}
+library(rcstatebin)
+
+st_crosswalk <- tibble(State = state.name) %>%
+  bind_cols(tibble(ST = state.abb)) %>% 
+  bind_rows(tibble(State = "District of Columbia", ST = "DC")) %>%
+  bind_rows(tibble(State = "Puerto Rico", ST = "PR"))
+st_crosswalk$ST <- as.factor(st_crosswalk$ST)
+
+stDemo   <- dfASC %>%
+  group_by(State) %>%
+  mutate_at(vars(Hispanic : Pacific), funs(. * TotalPop / 100)) %>%
+  summarise_at(vars(TotalPop : Pacific), sum, na.rm = TRUE) %>%
+  group_by(State) %>%
+  mutate_at(vars(Men : Pacific), funs(. / TotalPop * 100)) %>%
+  left_join(st_crosswalk) %>%
+  gather(TotalPop:Pacific, key = "demo", value = "share")
+  
+
+statebin(data = stDemo,
+  x = "ST",
+  y = "share",
+  facet = "demo",
+  heading =  "<b>State Demographics</b>",
+  footer = "<small>Cource: US Census Demogrpahic Data 2015",
+#  colors = RColorBrewer::brewer.pal(5, 'PuRd'),
+  control = 'dropdown'
+)
+```
+
 
 ### Hexbin from `geojsonio`
 ```{r message = F, warning = F, fig.width = 10}
@@ -128,7 +160,7 @@ spdf_fortified  <- tidy(spdf, region = "google_name")
 
 centers <- cbind.data.frame(data.frame(gCentroid(spdf, byid = TRUE), id = spdf@data$iso3166_2))
 
-spdf_fortified <- left_join(spdf_fortified , stASC, by=c("id"="State")) 
+spdf_fortified <- left_join(spdf_fortified , stASC, by=c("id" = "State")) 
 spdf_fortified$bin <- cut(spdf_fortified$MeanCommute,
                           breaks = c(seq(10, 35, by = 5), Inf),
                           labels = c(seq(10, 30, by = 5), "35+"),
