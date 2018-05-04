@@ -1,0 +1,16 @@
+
+# TidyTuesday
+
+***  
+### Week 5 - County-level American Community Survey (5-year estimates) 2015  
+* [RAW DATA](https://github.com/rfordatascience/tidytuesday/blob/master/data/acs2015_county_data.csv)  
+* [DataSource: census.gov](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml)  
+* [Kaggle source](https://www.kaggle.com/muonneutrino/us-census-demographic-data)  
+
+***  
+
+Here I summarized 6 common geographic visualization methods in [**heat map**](https://en.wikipedia.org/wiki/Heat_map) or [**choropleth map**](https://en.wikipedia.org/wiki/Choropleth_map).    
+
+### [CONUS](https://en.wikipedia.org/wiki/Contiguous_United_States) with data from `maps`     
+
+
