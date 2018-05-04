@@ -78,6 +78,11 @@ p <- ggplot(cnty, aes(long, lat, group = group)) +
 p
 ```
 
+### `albersusa`
+```{r}
+library(albersusa)
+```
+
 
 ### plotly  
 ```{r message = F, warning = F, fig.width = 10}
