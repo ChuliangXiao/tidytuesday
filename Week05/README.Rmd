@@ -23,9 +23,9 @@ Here I summarized 6 common geographic visualization methods in [**heat map**](ht
 ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week05/US_State_State_fiftystater.png)
 
 ### Bins of 50 States, DC and PR using `statebins`     
-![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week05/US_State_County_statebins.png)
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week05/US_State_State_statebins.png)
 
 ### Hexbins of 50 States and DC data from `geojsonion`     
-![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week05/US_State_County_geojsonio.png)
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week05/US_State_State_geojsonio.png)
 
 
