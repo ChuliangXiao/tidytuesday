@@ -5,7 +5,7 @@ date: "5/1/2018"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -33,10 +33,8 @@ cnty <- map_data("county")%>%
   rename(State = region, County = subregion) %>%
   mutate(County = str_replace(County, "Dona Ana", "Doña Ana")) 
 
-dfASC <- dfASC%>%
-  select(CensusId:County, MeanCommute)
-
-
+#dfASC <- dfASC%>%
+#  select(CensusId:County, MeanCommute)
 head(cnty)
 ```
 
@@ -58,7 +56,7 @@ cntyMiss <- cntyASC%>%
   group_by(State, County)%>%
   summarise(Missing = 1)
 
-cntyMiss %>% as.data.frame()
+#cntyMiss %>% as.data.frame()
 # https://en.wikipedia.org/wiki/De_Kalb,_Missouri
 # https://en.wikipedia.org/wiki/DeKalb_County,_Alabama
 ```
@@ -66,7 +64,7 @@ cntyMiss %>% as.data.frame()
 ## Counties Plot  
 ### CONUS Plot
 ```{r message = F, warning = F, fig.width = 10}
-p <- ggplot(cnty, aes(long, lat, group = group)) + 
+plt <- ggplot(cnty, aes(long, lat, group = group)) + 
   geom_polygon(data = cntyASC, aes(fill = MeanCommute), 
  #              show.legend = FALSE, 
                colour = "grey") + 
@@ -75,12 +73,31 @@ p <- ggplot(cnty, aes(long, lat, group = group)) +
   theme_void()+
   labs(title = "Commute Time (min)",
        caption = "Cource: US Census Demogrpahic Data 2015")
-p
+plt
 ```
 
 ### `albersusa`
-```{r}
+```{r message = F, warning = F, fig.width = 10}
 library(albersusa)
+uscnty <- counties_composite()
+# fortify may be deprecated in the future.
+usmap  <- broom::tidy(uscnty, region = "fips") %>% 
+  as.tbl() %>%
+  mutate(id = as.integer(id))
+
+albers <- usmap %>%
+  left_join(dfASC, by = c("id" = "CensusId")) %>% 
+  ggplot(aes(long, lat, group = group)) + 
+  geom_polygon(aes(fill = MeanCommute), 
+               colour = "grey") + 
+  coord_quickmap()+
+  scale_fill_distiller(name = "Minutes", palette = "Spectral")+
+  theme_void()+
+  labs(title = "Commute Time",
+       caption = "Cource: US Census Demogrpahic Data 2015") #+
+#  scale_fill_continuous(guide = guide_legend(title = "Mins"))+
+#  guides(fill = guide_legend(title = "Minutes"))
+albers
 ```
 
 
@@ -91,7 +108,7 @@ library(plotly)
 ```
 
 ### `choroplethr` framework  
-```{r message = F, warning = F}
+```{r message = F, warning = F, fig.width = 10}
 # https://bookdown.org/rdpeng/RProgDA/mapping.html#mapping-us-counties-and-states
 # https://github.com/trulia/choroplethr
 library(choroplethr)
@@ -112,16 +129,43 @@ choro$render()
 ## States plot
 ### `fiftystater`
 ```{r message = F, warning = F, fig.width = 10}
+library(fiftystater)
+data("fifty_states")
 
+fifty <- stASC %>% 
+  mutate(State = tolower(State)) %>% 
+  ggplot(aes(map_id = State)) +
+  geom_map(aes(fill = MeanCommute), map = fifty_states) +
+  expand_limits(x = fifty_states$long, y = fifty_states$lat) +
+  scale_fill_distiller(name = "Minutes", palette = "Spectral") +
+  coord_map() + 
+  theme_void() +
+  ggtitle( "Mean Commute Time" ) +
+  labs(caption = "Cource: US Census Demogrpahic Data 2015")
+fifty
 ```
 
 ### `statebins`
 ```{r message = F, warning = F, fig.width = 10}
 library(statebins)
+
+bin <- stASC %>% 
+  mutate(bin = cut(MeanCommute,
+                   breaks = c(seq(10, 35, by = 5), Inf),
+                   labels = c(seq(10, 30, by = 5), "35+"),
+                   include.lowest = TRUE)) %>% 
+  ggplot(aes(state = State, fill = MeanCommute)) + 
+  geom_statebins() + 
+  scale_fill_distiller(name = "Minutes", palette = "Spectral") +
+  coord_map() + 
+  theme_void() +
+  ggtitle( "Mean Commute Time" ) +
+  labs(caption = "Cource: US Census Demogrpahic Data 2015") 
+bin
 ```
 
 ### `rcstatebin`
-```{r}
+```{r include = F, message = F, warning = F, fig.width = 10}
 library(rcstatebin)
 
 st_crosswalk <- tibble(State = state.name) %>%
@@ -176,7 +220,7 @@ spdf_fortified$bin <- cut(spdf_fortified$MeanCommute,
 library(viridis)
 my_palette <- rev(magma(8))[c(-1,-8)]
 
-h <- ggplot() +
+hex <- ggplot() +
   geom_polygon(data = spdf_fortified, 
                aes(fill =  bin, x = long, y = lat, group = group)) +
   geom_text(data = centers, 
@@ -204,7 +248,7 @@ h <- ggplot() +
                                   margin = margin(b = -0.1, t = 0.4, l = 2, unit = "cm")
                                   )
     )
- h
+ hex
 ```
 
 
@@ -214,21 +258,12 @@ h <- ggplot() +
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## grid
+```{r message = F, warning = F, fig.height = 10, fig.width = 10}
+library(grid)
+library(gridExtra)
+d <- choro$render()
+grid.arrange(plt, albers, bin, hex, fifty, d, ncol = 2)
+```
 
 
