@@ -1,0 +1,76 @@
+---
+title: "Week06"
+author: "Chuliang Xiao"
+date: "May 8, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load library  
+```{r message = F, warning = F}
+library(tidyverse)
+library(Hmisc)
+```
+
+### Read in data  
+```{r message = F, warning = F}
+library(readxl)
+setwd("../Week06")
+fname <- "week6_coffee_chains.xlsx"
+excel_sheets(fname)
+dfStar <- read_excel(fname, 1)
+dfTimh <- read_excel(fname, 2)
+dfDunk <- read_excel(fname, 3)
+
+```
+
+```{r fig.width = 10}
+library(albersusa)
+us      <- usa_composite()
+us_map  <- fortify(us, region = "name")
+
+library(usmap)
+data(statepop)
+
+StarUS <- dfStar %>% 
+  filter(Country == "US") %>% 
+  mutate(state = openintro::abbr2state(`State/Province`))%>% 
+  filter(`State/Province` != "HI" & `State/Province` != "AK")
+
+avgStarUS <- StarUS %>% 
+  group_by(state) %>% 
+  summarise(count = n(), ST = unique(`State/Province`)) %>% 
+  left_join(statepop, by = c("ST" = "abbr")) %>% 
+  mutate(Avg = count/pop_2015 * 1e5) 
+
+#library(usmap)
+#data(us.cities)
+#MegaCity <- us.cities %>% 
+#  filter(pop > 1e6) %>%
+#  separate(name, c("City", "ST"), " (?=[^ ]+$)")
+
+ 
+t <- ggplot() +
+  geom_map(data = avgStarUS, aes(fill = Avg, map_id = state),
+           color="white", size = 0.01, map = us_map) + 
+  scale_fill_distiller(name = "Number", palette = "Spectral") +
+  geom_point(data = StarUS, aes(x = Longitude, y = Latitude), size = 0.04, alpha = 0.1) +
+#  geom_text(data = MegaCity, aes(x = long, y = lat, label = City), size = 3) +
+  expand_limits(x = us_map$long, y = us_map$lat) +
+  coord_map() +
+#  theme_void("albers", lat0 = 39, lat1 = 45) +
+  theme_void() +
+  theme(legend.position=c(.88, .4))+
+  ggtitle( "Starbuck Stores per 100, 000 population" ) +
+  labs(caption = "Cource: US Census Demogrpahic Data 2015")
+t
+#t + coord_map("polyconic")
+```
+
+
+
+
+
