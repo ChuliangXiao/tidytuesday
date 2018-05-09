@@ -10,3 +10,8 @@
 [DataSource (Dunkin Donuts): odditysoftware.com](http://www.odditysoftware.com/download/download.php?filename=dunkin-donuts.zip)
 ***  
 
+#### Starbucks stores density 
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/Fifty-States-map.png)
+
+#### Starbucks dot-density map for CONUS
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/CONUS-dot-density-map.png)

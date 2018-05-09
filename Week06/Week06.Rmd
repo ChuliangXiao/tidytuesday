@@ -55,7 +55,7 @@ p <- ggplot() +
   coord_map() +
   theme_void() +
   theme(legend.position=c(.88, .4))+
-  ggtitle( "Starbuck Stores per 100, 000 population" ) +
+  ggtitle( "Starbucks Stores per 100, 000 population" ) +
   labs(caption = "Source: US Census Demogrpahic Data 2015")
 p
 #p + coord_map("polyconic")
@@ -80,7 +80,7 @@ avgStarStarCONUS <- StarCONUS %>%
 
  
 t <- ggplot() +
-  geom_map(data = avgStarUS, aes(fill = Avg, map_id = state),
+  geom_map(data = avgStarStarCONUS, aes(fill = Avg, map_id = state),
            color="white", size = 0.01, map = us_map) + 
   scale_fill_distiller(name = "Number", palette = "Spectral") +
   geom_point(data = StarCONUS, aes(x = Longitude, y = Latitude), size = 0.04, alpha = 0.1) +
@@ -90,7 +90,7 @@ t <- ggplot() +
 #  theme_void("albers", lat0 = 39, lat1 = 45) +
   theme_void() +
   theme(legend.position=c(.88, .4))+
-  ggtitle( "Starbuck Stores per 100, 000 population" ) +
+  ggtitle( "Starbucks Stores per 100, 000 population" ) +
   labs(caption = "Source: US Census Demogrpahic Data 2015")
 t
 #t + coord_map("polyconic")
