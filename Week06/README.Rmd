@@ -15,3 +15,6 @@
 
 #### Starbucks dot-density map for CONUS  
 ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/CONUS-dot-density-map.png)
+
+#### Starbucks and Dunkin's Donuts 
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/CONUS-Starbucks-DD.png)
