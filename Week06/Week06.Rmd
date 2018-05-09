@@ -27,20 +27,46 @@ dfDunk <- read_excel(fname, 3)
 
 ```
 
+### Fifty States
 ```{r fig.width = 10}
 library(albersusa)
 us      <- usa_composite()
-us_map  <- fortify(us, region = "name")
+us_map  <- broom::tidy(us, region = "name")
 
 library(usmap)
 data(statepop)
 
 StarUS <- dfStar %>% 
   filter(Country == "US") %>% 
-  mutate(state = openintro::abbr2state(`State/Province`))%>% 
-  filter(`State/Province` != "HI" & `State/Province` != "AK")
+  mutate(state = openintro::abbr2state(`State/Province`))
 
 avgStarUS <- StarUS %>% 
+  group_by(state) %>% 
+  summarise(count = n(), ST = unique(`State/Province`)) %>% 
+  left_join(statepop, by = c("ST" = "abbr")) %>% 
+  mutate(Avg = count/pop_2015 * 1e5) 
+
+
+p <- ggplot() +
+  geom_map(data = avgStarUS, aes(fill = Avg, map_id = state),
+           color="white", size = 0.01, map = us_map) + 
+  scale_fill_distiller(name = "Number", palette = "Spectral") +
+  expand_limits(x = us_map$long, y = us_map$lat) +
+  coord_map() +
+  theme_void() +
+  theme(legend.position=c(.88, .4))+
+  ggtitle( "Starbuck Stores per 100, 000 population" ) +
+  labs(caption = "Source: US Census Demogrpahic Data 2015")
+p
+#p + coord_map("polyconic")
+```
+
+### Dot Density Map for CONUS
+```{r fig.width = 10}
+StarCONUS <- StarUS %>% 
+  filter(`State/Province` != "HI" & `State/Province` != "AK")
+
+avgStarStarCONUS <- StarCONUS %>% 
   group_by(state) %>% 
   summarise(count = n(), ST = unique(`State/Province`)) %>% 
   left_join(statepop, by = c("ST" = "abbr")) %>% 
@@ -57,7 +83,7 @@ t <- ggplot() +
   geom_map(data = avgStarUS, aes(fill = Avg, map_id = state),
            color="white", size = 0.01, map = us_map) + 
   scale_fill_distiller(name = "Number", palette = "Spectral") +
-  geom_point(data = StarUS, aes(x = Longitude, y = Latitude), size = 0.04, alpha = 0.1) +
+  geom_point(data = StarCONUS, aes(x = Longitude, y = Latitude), size = 0.04, alpha = 0.1) +
 #  geom_text(data = MegaCity, aes(x = long, y = lat, label = City), size = 3) +
   expand_limits(x = us_map$long, y = us_map$lat) +
   coord_map() +
@@ -65,7 +91,7 @@ t <- ggplot() +
   theme_void() +
   theme(legend.position=c(.88, .4))+
   ggtitle( "Starbuck Stores per 100, 000 population" ) +
-  labs(caption = "Cource: US Census Demogrpahic Data 2015")
+  labs(caption = "Source: US Census Demogrpahic Data 2015")
 t
 #t + coord_map("polyconic")
 ```
