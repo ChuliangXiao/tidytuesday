@@ -18,3 +18,9 @@
 
 #### Starbucks and Dunkin's Donuts 
 ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/Starbucks_DD.png)
+
+#### Starbucks Dunkin's Donuts and Tim Hortons in Michigan
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/Stores-MI.png)
+
+### Starbucks Dunkin's Donuts and Tim Hortons in Manhattan with `ggmap`
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week06/Stores-Manhattan.png)
