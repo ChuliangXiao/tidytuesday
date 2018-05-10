@@ -1,0 +1,740 @@
+Country,State,ST,City,Longitude,Latitude,Store
+USA,Indiana,IN,Fort Wayne,-85.1332896,41.199464999999996,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.1665685,41.1450222,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.1478554,41.1152844,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.12427269999999,41.1142118,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.0996081,41.1190561,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.21306059999999,41.0606672,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.24998169999999,41.0403358,Tim Hortons
+USA,Indiana,IN,Fort Wayne,-85.16605220000001,41.1623629,Tim Hortons
+USA,Indiana,IN,Indianapolis,-86.305804,39.763785,Tim Hortons
+USA,Indiana,IN,Richmond,-84.90453749999999,39.8275616,Tim Hortons
+USA,Indiana,IN,Roanoke,-85.30321099999999,40.9626996,Tim Hortons
+USA,Kentucky,KY,Ashland,-82.6581549,38.46572760000001,Tim Hortons
+USA,Kentucky,KY,Ashland,-82.627811,38.4723992,Tim Hortons
+USA,Kentucky,KY,Erlanger,-84.593671,39.0194227,Tim Hortons
+USA,Maine,ME,Bangor,-68.81165899999999,44.7902188,Tim Hortons
+USA,Maine,ME,Bangor,-68.7762389,44.7910002,Tim Hortons
+USA,Maine,ME,Bangor,-68.7778405,44.8212584,Tim Hortons
+USA,Maine,ME,Brewer,-68.75124000000001,44.784748,Tim Hortons
+USA,Maine,ME,Calais,-67.2858573,45.1813423,Tim Hortons
+USA,Maine,ME,Caribou,-68.0040973,46.8683741,Tim Hortons
+USA,Maine,ME,Clinton,-69.52522859999999,44.639479,Tim Hortons
+USA,Maine,ME,Houlton,-67.8410463,46.1450097,Tim Hortons
+USA,Maine,ME,Lincoln,-68.5221569,45.359146,Tim Hortons
+USA,Maine,ME,Madawaska,-68.3134584,47.35421729999999,Tim Hortons
+USA,Maine,ME,Newport,-69.2845761,44.83816299999999,Tim Hortons
+USA,Maine,ME,Old Town,-68.6833453,44.9158755,Tim Hortons
+USA,Maine,ME,Presque Isle,-68.01198839999999,46.69740729999999,Tim Hortons
+USA,Michigan,MI,Adrian,-84.0429066,41.8887671,Tim Hortons
+USA,Michigan,MI,Allendale,-85.9139629,42.9718375,Tim Hortons
+USA,Michigan,MI,Alma,-84.6661177,43.402282,Tim Hortons
+USA,Michigan,MI,Ann Arbor,-83.7410082,42.2675741,Tim Hortons
+USA,Michigan,MI,Ann Arbor,-83.7484659,42.2660981,Tim Hortons
+USA,Michigan,MI,Ann Arbor,-83.7599164,42.2478426,Tim Hortons
+USA,Michigan,MI,Ann Arbor,-83.7336207,42.2146992,Tim Hortons
+USA,Michigan,MI,Auburn Hills,-83.2448295,42.6588114,Tim Hortons
+USA,Michigan,MI,Auburn Hills,-83.306778,42.706056,Tim Hortons
+USA,Michigan,MI,Bay City,-83.9147605,43.623339,Tim Hortons
+USA,Michigan,MI,Belleville,-83.4399452,42.22315589999999,Tim Hortons
+USA,Michigan,MI,Belleville,-83.54305269999999,42.2151259,Tim Hortons
+USA,Michigan,MI,Birmingham,-83.219638,42.554054,Tim Hortons
+USA,Michigan,MI,Bloomfield,-83.28451009999999,42.5452119,Tim Hortons
+USA,Michigan,MI,Bloomfield Hills,-83.2616608,42.603204,Tim Hortons
+USA,Michigan,MI,Brighton,-83.7806624,42.5311138,Tim Hortons
+USA,Michigan,MI,Brooklyn,-84.2482291,42.10509769999999,Tim Hortons
+USA,Michigan,MI,Brownstown,-83.238148,42.0953189,Tim Hortons
+USA,Michigan,MI,Burton,-83.68478619999999,42.973569,Tim Hortons
+USA,Michigan,MI,Burton,-83.6340719,43.0191335,Tim Hortons
+USA,Michigan,MI,Cadillac,-85.3770777,44.2524728,Tim Hortons
+USA,Michigan,MI,Canton,-83.44772300000001,42.3234844,Tim Hortons
+USA,Michigan,MI,Canton,-83.4845412,42.3214516,Tim Hortons
+USA,Michigan,MI,Canton,-83.48823279999999,42.2709053,Tim Hortons
+USA,Michigan,MI,Charter Twp Of Clinton,-82.87056,42.5561421,Tim Hortons
+USA,Michigan,MI,Chesterfield,-82.7693493,42.6763033,Tim Hortons
+USA,Michigan,MI,Chesterfield,-82.8302756,42.6792647,Tim Hortons
+USA,Michigan,MI,Clarkston,-83.3772311,42.71962449999999,Tim Hortons
+USA,Michigan,MI,Clarkston,-83.3802374,42.7492071,Tim Hortons
+USA,Michigan,MI,Clawson,-83.1646717,42.5336294,Tim Hortons
+USA,Michigan,MI,Clinton,-82.9526779,42.5839724,Tim Hortons
+USA,Michigan,MI,Clinton Township,-82.8840192,42.583125,Tim Hortons
+USA,Michigan,MI,Clinton Township,-82.9034995,42.62810169999999,Tim Hortons
+USA,Michigan,MI,Clinton Township,-82.87760589999999,42.6306045,Tim Hortons
+USA,Michigan,MI,Clinton Township,-82.92799149999999,42.5493463,Tim Hortons
+USA,Michigan,MI,Clinton Township,-82.9011323,42.5928343,Tim Hortons
+USA,Michigan,MI,Clio,-83.7595425,43.1779574,Tim Hortons
+USA,Michigan,MI,Commerce,-83.439703,42.5572492,Tim Hortons
+USA,Michigan,MI,Davison,-83.5182234,43.0182264,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.1576919,42.3441148,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.15918409999999,42.3294269,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.177126,42.3244276,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.23692470000002,42.3074814,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.26860099999999,42.3008986,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.281309,42.32646829999999,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.2811627,42.2987429,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.18840229999999,42.3086705,Tim Hortons
+USA,Michigan,MI,Dearborn,-83.2702733,42.2803782,Tim Hortons
+USA,Michigan,MI,Dearborn Heights,-83.31043000000001,42.3120291,Tim Hortons
+USA,Michigan,MI,Dearborn Heights,-83.2740299,42.34177469999999,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0006543,42.4009604,Tim Hortons
+USA,Michigan,MI,Detroit,-83.1594144,42.4032331,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0451995,42.339924,Tim Hortons
+USA,Michigan,MI,Detroit,-83.055099,42.340099,Tim Hortons
+USA,Michigan,MI,Detroit,-83.055099,42.340099,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0416841,42.3305356,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0749012,42.3677613,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0661709,42.35546009999999,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0467118,42.3327477,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0554329,42.341078,Tim Hortons
+USA,Michigan,MI,Detroit,-83.0017227,42.3476077,Tim Hortons
+USA,Michigan,MI,Dewitt,-84.543719,42.8290173,Tim Hortons
+USA,Michigan,MI,Dundee,-83.6764374,41.96047600000001,Tim Hortons
+USA,Michigan,MI,East Lansing,-84.4942615,42.72012,Tim Hortons
+USA,Michigan,MI,East Lansing,-84.46580589999999,42.7327727,Tim Hortons
+USA,Michigan,MI,East Lansing,-84.484011,42.7706855,Tim Hortons
+USA,Michigan,MI,East Tawas,-83.4995388,44.2775993,Tim Hortons
+USA,Michigan,MI,Eastpointe,-82.9440429,42.4646134,Tim Hortons
+USA,Michigan,MI,Essexville,-83.8466937,43.5944265,Tim Hortons
+USA,Michigan,MI,Farmington Hills,-83.37720039999999,42.4991573,Tim Hortons
+USA,Michigan,MI,Farmington Hills,-83.42378839999999,42.4687108,Tim Hortons
+USA,Michigan,MI,Fenton,-83.736224000000007,42.790124,Tim Hortons
+USA,Michigan,MI,Fenton,-83.707833,42.79829549999999,Tim Hortons
+USA,Michigan,MI,Ferndale,-83.1311831,42.4564995,Tim Hortons
+USA,Michigan,MI,Flat Rock,-83.2849454,42.108502,Tim Hortons
+USA,Michigan,MI,Flint,-83.77323109999999,43.0029714,Tim Hortons
+USA,Michigan,MI,Flint,-83.7281943,42.943533,Tim Hortons
+USA,Michigan,MI,Flint,-83.7668437,43.0600866,Tim Hortons
+USA,Michigan,MI,Flint,-83.6926132,42.9437631,Tim Hortons
+USA,Michigan,MI,Frankenmuth,-83.7386318,43.3364676,Tim Hortons
+USA,Michigan,MI,Fraser,-82.9638288,42.5527372,Tim Hortons
+USA,Michigan,MI,Garden City,-83.3386728,42.3250303,Tim Hortons
+USA,Michigan,MI,Gaylord,-84.69496190000001,45.0270486,Tim Hortons
+USA,Michigan,MI,Grand Blanc,-83.632245,42.9290309,Tim Hortons
+USA,Michigan,MI,Grand Haven,-86.2203917,43.0556533,Tim Hortons
+USA,Michigan,MI,Grand Ledge,-84.7373717,42.7403701,Tim Hortons
+USA,Michigan,MI,Grand Rapids,-85.6279631,43.0317605,Tim Hortons
+USA,Michigan,MI,Grand Rapids,-85.69033089999999,42.9633519,Tim Hortons
+USA,Michigan,MI,Grandville,-85.76182969999999,42.85460279999999,Tim Hortons
+USA,Michigan,MI,Greenville,-85.286546,43.17662989999999,Tim Hortons
+USA,Michigan,MI,Harper Woods,-82.9297144,42.4496001,Tim Hortons
+USA,Michigan,MI,Hartland,-83.74081040000002,42.6352009,Tim Hortons
+USA,Michigan,MI,Hazel Park,-83.08481859999999,42.4477258,Tim Hortons
+USA,Michigan,MI,Hazel Park,-83.1049294,42.4609647,Tim Hortons
+USA,Michigan,MI,Highland Park,-83.1012234,42.4096156,Tim Hortons
+USA,Michigan,MI,Holland,-86.1143855,42.8054011,Tim Hortons
+USA,Michigan,MI,Holland,-86.07713210000001,42.7987983,Tim Hortons
+USA,Michigan,MI,Holland,-86.1164471,42.7671308,Tim Hortons
+USA,Michigan,MI,Holt,-84.52699059999999,42.6504533,Tim Hortons
+USA,Michigan,MI,Howell,-83.8753038,42.6264531,Tim Hortons
+USA,Michigan,MI,Howell,-83.88120529999999,42.5789041,Tim Hortons
+USA,Michigan,MI,Imlay City,-83.0723273,43.0079149,Tim Hortons
+USA,Michigan,MI,Jackson,-84.43492309999999,42.2470983,Tim Hortons
+USA,Michigan,MI,Kalamazoo,-85.64322609999999,42.2966346,Tim Hortons
+USA,Michigan,MI,Kentwood,-85.6266041,42.883444,Tim Hortons
+USA,Michigan,MI,Lake Orion,-83.2396852,42.772129,Tim Hortons
+USA,Michigan,MI,Lambertville,-83.6261852,41.7486509,Tim Hortons
+USA,Michigan,MI,Lansing,-84.5139482,42.68218419999999,Tim Hortons
+USA,Michigan,MI,Lansing,-84.59029579999999,42.6623584,Tim Hortons
+USA,Michigan,MI,Lansing,-84.6036317,42.7256824,Tim Hortons
+USA,Michigan,MI,Lapeer,-83.32076819999999,43.0437681,Tim Hortons
+USA,Michigan,MI,Lenox,-82.74960449999999,42.7207249,Tim Hortons
+USA,Michigan,MI,Lincoln Park,-83.1788634,42.2512018,Tim Hortons
+USA,Michigan,MI,Lincoln Park,-83.1878637,42.2530411,Tim Hortons
+USA,Michigan,MI,Livonia,-83.3357607,42.41094,Tim Hortons
+USA,Michigan,MI,Livonia,-83.3150107,42.3848821,Tim Hortons
+USA,Michigan,MI,Livonia,-83.35326669999999,42.3980491,Tim Hortons
+USA,Michigan,MI,Livonia,-83.3728871,42.4401749,Tim Hortons
+USA,Michigan,MI,Livonia,-83.37316560000001,42.368685,Tim Hortons
+USA,Michigan,MI,Livonia,-83.41500769999999,42.3959008,Tim Hortons
+USA,Michigan,MI,Lowell,-85.3542932,42.9580053,Tim Hortons
+USA,Michigan,MI,Lyon Township,-83.6500047,42.4413914,Tim Hortons
+USA,Michigan,MI,Madison Heights,-83.0859856,42.5042858,Tim Hortons
+USA,Michigan,MI,Madison Heights,-83.11054639999999,42.5043006,Tim Hortons
+USA,Michigan,MI,Marysville,-82.4781102,42.91904470000001,Tim Hortons
+USA,Michigan,MI,Melvindale,-83.1784832,42.2817318,Tim Hortons
+USA,Michigan,MI,Midland,-84.2121993,43.613696,Tim Hortons
+USA,Michigan,MI,Midland,-84.2373554,43.6093707,Tim Hortons
+USA,Michigan,MI,Milford,-83.6098564,42.5809948,Tim Hortons
+USA,Michigan,MI,Monroe,-83.3631788,41.92685669999999,Tim Hortons
+USA,Michigan,MI,Monroe,-83.4041002,41.9413647,Tim Hortons
+USA,Michigan,MI,Monroe,-83.40101299999999,41.9130145,Tim Hortons
+USA,Michigan,MI,Mount Pleasant,-84.76497150000002,43.6114346,Tim Hortons
+USA,Michigan,MI,Mount Pleasant,-84.7742693,43.61374,Tim Hortons
+USA,Michigan,MI,Mount Pleasant,-84.7668705,43.5851382,Tim Hortons
+USA,Michigan,MI,Muskegon,-86.19671439999999,43.2054229,Tim Hortons
+USA,Michigan,MI,New Hudson,-83.6150298,42.514741,Tim Hortons
+USA,Michigan,MI,Milford,-83.6098564,42.5809948,Tim Hortons
+USA,Michigan,MI,Northville,-83.4334634,42.4143779,Tim Hortons
+USA,Michigan,MI,Norton Shores,-86.2629573,43.1914023,Tim Hortons
+USA,Michigan,MI,Novi,-83.5144754,42.4913758,Tim Hortons
+USA,Michigan,MI,Oak Park,-83.1824106,42.4593233,Tim Hortons
+USA,Michigan,MI,Okemos,-84.4195644,42.7253553,Tim Hortons
+USA,Michigan,MI,Okemos,-84.4319958,42.6819827,Tim Hortons
+USA,Michigan,MI,Owosso,-84.174382,42.9970783,Tim Hortons
+USA,Michigan,MI,Oxford,-83.27124289999999,42.8366553,Tim Hortons
+USA,Michigan,MI,Plymouth,-83.46004119999999,42.3762827,Tim Hortons
+USA,Michigan,MI,Pontiac,-83.2493513,42.6188659,Tim Hortons
+USA,Michigan,MI,Pontiac,-83.278404,42.6778722,Tim Hortons
+USA,Michigan,MI,Port Huron,-82.4393695,43.0024807,Tim Hortons
+USA,Michigan,MI,Port Huron,-82.4549869,43.0197097,Tim Hortons
+USA,Michigan,MI,Port Huron,-82.4531672,42.9753682,Tim Hortons
+USA,Michigan,MI,Portage,-85.5889042,42.2341536,Tim Hortons
+USA,Michigan,MI,Redford,-83.27591679999999,42.3959251,Tim Hortons
+USA,Michigan,MI,Redford,-83.2780069,42.3996431,Tim Hortons
+USA,Michigan,MI,Redford,-83.31073529999999,42.43836839999999,Tim Hortons
+USA,Michigan,MI,Richmond,-82.7398979,42.798188,Tim Hortons
+USA,Michigan,MI,Rochester Hills,-83.171728,42.648581,Tim Hortons
+USA,Michigan,MI,Rochester Hills,-83.1939543,42.6804007,Tim Hortons
+USA,Michigan,MI,Rochester Hills,-83.2029949,42.6762827,Tim Hortons
+USA,Michigan,MI,Rochester Hills,-83.1704481,42.6224399,Tim Hortons
+USA,Michigan,MI,Rochester Hills,-83.13384339999999,42.6682053,Tim Hortons
+USA,Michigan,MI,Romulus,-83.42453909999999,42.2488581,Tim Hortons
+USA,Michigan,MI,Romulus,-83.3291297,42.2537011,Tim Hortons
+USA,Michigan,MI,Roseville,-82.9463537,42.48349959999999,Tim Hortons
+USA,Michigan,MI,Roseville,-82.9614766,42.5051136,Tim Hortons
+USA,Michigan,MI,Roseville,-82.9207208,42.5227406,Tim Hortons
+USA,Michigan,MI,Royal Oak,-83.1182781,42.4901669,Tim Hortons
+USA,Michigan,MI,Saginaw,-83.9494643,43.43612299999999,Tim Hortons
+USA,Michigan,MI,Saginaw,-83.9352809,43.4356338,Tim Hortons
+USA,Michigan,MI,Saginaw,-83.97880789999999,43.47917409999999,Tim Hortons
+USA,Michigan,MI,Saginaw,-84.0124579,43.437258,Tim Hortons
+USA,Michigan,MI,Saginaw,-84.0733312,43.4155357,Tim Hortons
+USA,Michigan,MI,Saint Clair,-82.4869724,42.8213637,Tim Hortons
+USA,Michigan,MI,Saint Clair Shores,-82.90630320000001,42.4708707,Tim Hortons
+USA,Michigan,MI,Saint Clair Shores,-82.8981683,42.5001533,Tim Hortons
+USA,Michigan,MI,Saline,-83.7702449,42.1710905,Tim Hortons
+USA,Michigan,MI,Shelby,-82.9761671,42.6712563,Tim Hortons
+USA,Michigan,MI,Shelby Township,-83.0079581,42.6703191,Tim Hortons
+USA,Michigan,MI,Shelby Township,-82.9740554,42.6300712,Tim Hortons
+USA,Michigan,MI,Shelby Township,-83.03240339999999,42.6410885,Tim Hortons
+USA,Michigan,MI,Southfield,-83.2390997,42.5016408,Tim Hortons
+USA,Michigan,MI,Southfield,-83.24149039999999,42.47484679999999,Tim Hortons
+USA,Michigan,MI,Southfield,-83.283587,42.473867,Tim Hortons
+USA,Michigan,MI,Southfield,-83.3015087,42.49710899999999,Tim Hortons
+USA,Michigan,MI,Southfield,-83.20380580000001,42.5035968,Tim Hortons
+USA,Michigan,MI,Southgate,-83.19340980000001,42.2131863,Tim Hortons
+USA,Michigan,MI,Southgate,-83.2192493,42.2137494,Tim Hortons
+USA,Michigan,MI,Southgate,-83.1887015,42.18541219999999,Tim Hortons
+USA,Michigan,MI,Southgate,-83.22540029999999,42.1991723,Tim Hortons
+USA,Michigan,MI,Sterling Heights,-83.0281445,42.5504598,Tim Hortons
+USA,Michigan,MI,Sterling Heights,-83.0302557,42.5635233,Tim Hortons
+USA,Michigan,MI,Sterling Heights,-83.0501914,42.5660761,Tim Hortons
+USA,Michigan,MI,Sterling Heights,-83.0687702,42.5513375,Tim Hortons
+USA,Michigan,MI,Sterling Heights,-83.0513869,42.5937924,Tim Hortons
+USA,Michigan,MI,Sterling Heights,-82.97329959999999,42.6115125,Tim Hortons
+USA,Michigan,MI,Sylvan Lake,-83.3364177,42.6083422,Tim Hortons
+USA,Michigan,MI,Taylor,-83.2301483,42.2254931,Tim Hortons
+USA,Michigan,MI,Taylor,-83.2671378,42.1962955,Tim Hortons
+USA,Michigan,MI,Taylor,-83.24612599999999,42.2693161,Tim Hortons
+USA,Michigan,MI,Taylor,-83.2556397,42.2562836,Tim Hortons
+USA,Michigan,MI,Taylor,-83.3054849,42.19660289999999,Tim Hortons
+USA,Michigan,MI,Taylor,-83.270545,42.2457499,Tim Hortons
+USA,Michigan,MI,Tecumseh,-83.9601627,42.0061514,Tim Hortons
+USA,Michigan,MI,Trenton,-83.1906473,42.1417472,Tim Hortons
+USA,Michigan,MI,Troy,-83.1106564,42.5629083,Tim Hortons
+USA,Michigan,MI,Troy,-83.10991779999999,42.5495787,Tim Hortons
+USA,Michigan,MI,Troy,-83.1285855,42.56783679999999,Tim Hortons
+USA,Michigan,MI,Troy,-83.13801079999999,42.5632768,Tim Hortons
+USA,Michigan,MI,Utica,-83.0244518,42.6261973,Tim Hortons
+USA,Michigan,MI,Van Buren,-83.48567039999999,42.2266201,Tim Hortons
+USA,Michigan,MI,Belleville,-83.4399452,42.22315589999999,Tim Hortons
+USA,Michigan,MI,Belleville,-83.54305269999999,42.2151259,Tim Hortons
+USA,Michigan,MI,Walled Lake,-83.48064959999999,42.5372481,Tim Hortons
+USA,Michigan,MI,Warren,-83.04347949999999,42.4485301,Tim Hortons
+USA,Michigan,MI,Warren,-83.0647972,42.47717919999999,Tim Hortons
+USA,Michigan,MI,Warren,-83.00716059999999,42.49089480000001,Tim Hortons
+USA,Michigan,MI,Warren,-82.9691838,42.4930907,Tim Hortons
+USA,Michigan,MI,Warren,-83.047068,42.504402,Tim Hortons
+USA,Michigan,MI,Warren,-82.98789939999999,42.5062045,Tim Hortons
+USA,Michigan,MI,Warren,-83.0278927,42.5070421,Tim Hortons
+USA,Michigan,MI,Washington,-83.00241179999999,42.8027936,Tim Hortons
+USA,Michigan,MI,Waterford,-83.3551038,42.6408676,Tim Hortons
+USA,Michigan,MI,Waterford,-83.38709759999999,42.6903478,Tim Hortons
+USA,Michigan,MI,Waterford,-83.326185,42.6357394,Tim Hortons
+USA,Michigan,MI,Wayne,-83.3769174,42.28091,Tim Hortons
+USA,Michigan,MI,West Bloomfield,-83.3614283,42.5433675,Tim Hortons
+USA,Michigan,MI,Bloomfield,-83.28451009999999,42.5452119,Tim Hortons
+USA,Michigan,MI,West Branch,-84.2261918,44.2504131,Tim Hortons
+USA,Michigan,MI,Westland,-83.3800734,42.3249917,Tim Hortons
+USA,Michigan,MI,Westland,-83.4178341,42.324187,Tim Hortons
+USA,Michigan,MI,Westland,-83.3843225,42.3383799,Tim Hortons
+USA,Michigan,MI,Westland,-83.387661,42.3043252,Tim Hortons
+USA,Michigan,MI,White Lake,-83.4675188,42.6565192,Tim Hortons
+USA,Michigan,MI,Woodhaven,-83.2270527,42.148669,Tim Hortons
+USA,Michigan,MI,Woodhaven,-83.2469186,42.138013,Tim Hortons
+USA,Michigan,MI,Wyandotte,-83.14899849999999,42.2061284,Tim Hortons
+USA,Michigan,MI,Wyoming,-85.7047786,42.9131125,Tim Hortons
+USA,Michigan,MI,Wyoming,-85.6838521,42.88380120000001,Tim Hortons
+USA,Michigan,MI,Ypsilanti,-83.61861549999999,42.2235127,Tim Hortons
+USA,Michigan,MI,Ypsilanti,-83.6479865,42.2491905,Tim Hortons
+USA,Michigan,MI,Ypsilanti,-83.6435714,42.2274034,Tim Hortons
+USA,Minnesota,MN,Bemidji,-94.8794506,47.46912810000001,Tim Hortons
+USA,Minnesota,MN,Brainerd,-94.2186708,46.3572087,Tim Hortons
+USA,Minnesota,MN,Brooklyn Park,-93.3865052,45.1094328,Tim Hortons
+USA,Minnesota,MN,Forest Lake,-92.99817329999999,45.2783704,Tim Hortons
+USA,Minnesota,MN,International Falls,-93.40346199999999,48.58856000000001,Tim Hortons
+USA,Minnesota,MN,Mahnomen,-95.9617463,47.3079394,Tim Hortons
+USA,Minnesota,MN,Minneapolis,-93.2364711,44.98012749999999,Tim Hortons
+USA,Minnesota,MN,Minneapolis,-93.2201302,44.9485569,Tim Hortons
+USA,Minnesota,MN,Minneapolis,-93.2401046,44.8544766,Tim Hortons
+USA,Minnesota,MN,Saint Paul,-93.10545189999999,45.0060465,Tim Hortons
+USA,Minnesota,MN,Savage,-93.38082829999999,44.7492727,Tim Hortons
+USA,Minnesota,MN,St Cloud,-94.18516,45.548173,Tim Hortons
+USA,New Jersey,NJ,Hazlet,-74.1878843,40.4223419,Tim Hortons
+USA,New Jersey,NJ,Newark,-74.1717099,40.7332238,Tim Hortons
+USA,New Jersey,NJ,Raritan,-74.6278513,40.5749182,Tim Hortons
+USA,New Jersey,NJ,Stockholm,-74.5209649,41.0887551,Tim Hortons
+USA,New York,NY,Akron,-78.5048716,42.998074,Tim Hortons
+USA,New York,NY,Albion,-78.19342429999999,43.2421617,Tim Hortons
+USA,New York,NY,Alden,-78.5083559,42.8960319,Tim Hortons
+USA,New York,NY,Amherst,-78.6975276,43.0841153,Tim Hortons
+USA,New York,NY,Amherst,-78.8218607,43.0010352,Tim Hortons
+USA,New York,NY,Amherst,-78.7193235,42.9913027,Tim Hortons
+USA,New York,NY,Amherst,-78.79902349999999,43.0125123,Tim Hortons
+USA,New York,NY,Amherst,-78.8075813,42.9803804,Tim Hortons
+USA,New York,NY,Amherst,-78.81542929999999,42.9922495,Tim Hortons
+USA,New York,NY,Amherst,-78.7552974,42.9496019,Tim Hortons
+USA,New York,NY,Amherst,-78.7927926,42.988525,Tim Hortons
+USA,New York,NY,Angola,-79.0405588,42.6498221,Tim Hortons
+USA,New York,NY,Arcade,-78.44676040000002,42.5316194,Tim Hortons
+USA,New York,NY,Batavia,-78.1862685,42.99832989999999,Tim Hortons
+USA,New York,NY,Batavia,-78.20657609999999,43.0066485,Tim Hortons
+USA,New York,NY,Blasdell,-78.8235095,42.8003417,Tim Hortons
+USA,New York,NY,Blasdell,-78.8143723,42.7914003,Tim Hortons
+USA,New York,NY,Brewerton,-76.13140159999999,43.231763,Tim Hortons
+USA,New York,NY,Brockport,-77.94595699999999,43.19779490000001,Tim Hortons
+USA,New York,NY,Buffalo,-78.8768765,42.87706379999999,Tim Hortons
+USA,New York,NY,Buffalo,-78.8753128,42.8746893,Tim Hortons
+USA,New York,NY,Buffalo,-78.900047,42.9126521,Tim Hortons
+USA,New York,NY,Buffalo,-78.8138855,42.885093,Tim Hortons
+USA,New York,NY,Buffalo,-78.8375329,42.861152,Tim Hortons
+USA,New York,NY,Buffalo,-78.872411,42.8817115,Tim Hortons
+USA,New York,NY,Buffalo,-78.8805479,42.9336263,Tim Hortons
+USA,New York,NY,Buffalo,-78.80379599999999,42.9416645,Tim Hortons
+USA,New York,NY,Buffalo,-78.868077,42.890837,Tim Hortons
+USA,New York,NY,Buffalo,-78.8248318,42.8676311,Tim Hortons
+USA,New York,NY,Buffalo,-78.8196215,42.9500876,Tim Hortons
+USA,New York,NY,Buffalo,-78.8682097,42.9804422,Tim Hortons
+USA,New York,NY,Buffalo,-78.8720244,42.88334649999999,Tim Hortons
+USA,New York,NY,Buffalo,-78.75502,42.852829,Tim Hortons
+USA,New York,NY,Buffalo,-78.8119828,42.8568876,Tim Hortons
+USA,New York,NY,Buffalo,-78.8528401,42.9272065,Tim Hortons
+USA,New York,NY,Buffalo,-78.8680998,42.9401975,Tim Hortons
+USA,New York,NY,Buffalo,-78.7981091,42.8088324,Tim Hortons
+USA,New York,NY,Buffalo,-78.8773942,42.9028575,Tim Hortons
+USA,New York,NY,Buffalo,-78.848085,42.9284109,Tim Hortons
+USA,New York,NY,Buffalo,-78.87891929999999,42.95701469999999,Tim Hortons
+USA,New York,NY,Buffalo,-78.9070086,42.9450333,Tim Hortons
+USA,New York,NY,Buffalo,-78.8687287,42.9453624,Tim Hortons
+USA,New York,NY,Buffalo,-78.8261462,42.95134420000001,Tim Hortons
+USA,New York,NY,Buffalo,-78.8199697,42.9570221,Tim Hortons
+USA,New York,NY,Buffalo,-78.812735,42.8469168,Tim Hortons
+USA,New York,NY,Buffalo,-78.7320347,42.9346985,Tim Hortons
+USA,New York,NY,Buffalo,-78.8751748,42.8856854,Tim Hortons
+USA,New York,NY,Buffalo,-78.8869375,42.8957222,Tim Hortons
+USA,New York,NY,Buffalo,-78.8049819,42.990303,Tim Hortons
+USA,New York,NY,Buffalo,-78.8318242,42.9264245,Tim Hortons
+USA,New York,NY,Buffalo,-78.8737608,42.8988011,Tim Hortons
+USA,New York,NY,Buffalo,-78.812573,42.84755089999999,Tim Hortons
+USA,New York,NY,Buffalo,-78.87681119999999,42.9129921,Tim Hortons
+USA,New York,NY,Buffalo,-78.8192203,42.872664,Tim Hortons
+USA,New York,NY,Buffalo,-78.84988589999999,42.8748963,Tim Hortons
+USA,New York,NY,Buffalo,-78.86732649999999,42.9005901,Tim Hortons
+USA,New York,NY,Buffalo,-78.7417535,42.9252505,Tim Hortons
+USA,New York,NY,Buffalo,-78.8660426,42.9015395,Tim Hortons
+USA,New York,NY,Canandaigua,-77.2695645,42.87737509999999,Tim Hortons
+USA,New York,NY,Canandaigua,-77.29292889999999,42.9053083,Tim Hortons
+USA,New York,NY,Castle Creek,-75.9166901,42.231419,Tim Hortons
+USA,New York,NY,Chaffee,-78.477925,42.5373254,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.763132,42.9134722,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.777755,42.9076846,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.75367539999999,42.8834015,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.7843084,42.9153399,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.75525490000001,42.8853789,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.75371849999999,42.9085038,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.7547326,42.9185854,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.7259924,42.9321546,Tim Hortons
+USA,New York,NY,Cheektowaga,-78.793629,42.9197564,Tim Hortons
+USA,New York,NY,Clarence,-78.60286740000001,42.9525768,Tim Hortons
+USA,New York,NY,Clarence,-78.64680249999999,42.9704334,Tim Hortons
+USA,New York,NY,Corfu,-78.3290141,43.0116656,Tim Hortons
+USA,New York,NY,Darien Center,-78.38611200000001,42.928219,Tim Hortons
+USA,New York,NY,Depew,-78.7083145,42.8673482,Tim Hortons
+USA,New York,NY,Depew,-78.69645129999999,42.8743475,Tim Hortons
+USA,New York,NY,Depew,-78.68373369999999,42.8998539,Tim Hortons
+USA,New York,NY,Depew,-78.69753659999999,42.8998147,Tim Hortons
+USA,New York,NY,Depew,-78.6974797,42.9157429,Tim Hortons
+USA,New York,NY,Depew,-78.69643289999999,42.9285614,Tim Hortons
+USA,New York,NY,Derby,-78.9875432,42.6971372,Tim Hortons
+USA,New York,NY,Dunkirk,-79.316518,42.4591571,Tim Hortons
+USA,New York,NY,Dunkirk,-79.3306028,42.4884397,Tim Hortons
+USA,New York,NY,East Amherst,-78.6961653,43.0108875,Tim Hortons
+USA,New York,NY,East Amherst,-78.69752489999999,43.030046,Tim Hortons
+USA,New York,NY,East Aurora,-78.6293176,42.7668122,Tim Hortons
+USA,New York,NY,East Aurora,-78.611256,42.773894,Tim Hortons
+USA,New York,NY,East Rochester,-77.4953582,43.1161823,Tim Hortons
+USA,New York,NY,East Rochester,-77.4801009,43.1028311,Tim Hortons
+USA,New York,NY,Eden,-78.8905632,42.66267209999999,Tim Hortons
+USA,New York,NY,Ellicottville,-78.6599985,42.2855977,Tim Hortons
+USA,New York,NY,Elma,-78.69622059999999,42.8253761,Tim Hortons
+USA,New York,NY,Elma,-78.63719189999999,42.8055525,Tim Hortons
+USA,New York,NY,Elma,-78.62236349999999,42.7942809,Tim Hortons
+USA,New York,NY,Elmira,-76.80848150000001,42.0883664,Tim Hortons
+USA,New York,NY,Evans Mills,-75.8424751,44.03662629999999,Tim Hortons
+USA,New York,NY,Farmington,-77.3434079,42.97352009999999,Tim Hortons
+USA,New York,NY,Fredonia,-79.3093647,42.4518625,Tim Hortons
+USA,New York,NY,Fredonia,-79.3340889,42.45322530000001,Tim Hortons
+USA,New York,NY,Gates,-77.6917936,43.1501762,Tim Hortons
+USA,New York,NY,Gates,-77.7318554,43.174528,Tim Hortons
+USA,New York,NY,Gates,-77.694813,43.1293196,Tim Hortons
+USA,New York,NY,Geneseo,-77.7877154,42.7978617,Tim Hortons
+USA,New York,NY,Geneva,-77.001499,42.85702089999999,Tim Hortons
+USA,New York,NY,Getzville,-78.7672429,43.03424589999999,Tim Hortons
+USA,New York,NY,Getzville,-78.77180249999999,43.0113108,Tim Hortons
+USA,New York,NY,Getzville,-78.7520487,43.04372559999999,Tim Hortons
+USA,New York,NY,Gowanda,-78.93399529999999,42.4660818,Tim Hortons
+USA,New York,NY,Grand Island,-78.9486939,43.0078307,Tim Hortons
+USA,New York,NY,Grand Island,-78.9676887,43.0261605,Tim Hortons
+USA,New York,NY,Greece,-77.68211250000002,43.2071668,Tim Hortons
+USA,New York,NY,Greece,-77.7007531,43.1870513,Tim Hortons
+USA,New York,NY,Greece,-77.65969559999999,43.2252538,Tim Hortons
+USA,New York,NY,Greece,-77.6971611,43.2547674,Tim Hortons
+USA,New York,NY,Hamburg,-78.8261788,42.72441180000001,Tim Hortons
+USA,New York,NY,Hamburg,-78.8623511,42.7743254,Tim Hortons
+USA,New York,NY,Hamburg,-78.8127588,42.7683344,Tim Hortons
+USA,New York,NY,Hamburg,-78.85301319999999,42.750015,Tim Hortons
+USA,New York,NY,Hamburg,-78.818399,42.7359081,Tim Hortons
+USA,New York,NY,Hamburg,-78.8373608,42.7340671,Tim Hortons
+USA,New York,NY,Henrietta,-77.6512451,43.05826820000001,Tim Hortons
+USA,New York,NY,Hogansburg,-74.604345,44.968304,Tim Hortons
+USA,New York,NY,Hogansburg,-74.72002719999999,44.9793112,Tim Hortons
+USA,New York,NY,Hogansburg,-74.6836837,44.9786674,Tim Hortons
+USA,New York,NY,Irving,-79.12135789999999,42.5607236,Tim Hortons
+USA,New York,NY,Jamaica,-73.80814,40.7002162,Tim Hortons
+USA,New York,NY,Jamestown,-79.2411281,42.1172862,Tim Hortons
+USA,New York,NY,Jamestown,-79.21112269999999,42.11360570000001,Tim Hortons
+USA,New York,NY,Jamestown,-79.236425,42.093125,Tim Hortons
+USA,New York,NY,Jamestown,-79.2291007,42.0818075,Tim Hortons
+USA,New York,NY,Kenmore,-78.87981889999999,42.977613,Tim Hortons
+USA,New York,NY,Kenmore,-78.8377301,42.9588319,Tim Hortons
+USA,New York,NY,Lackawanna,-78.8027207,42.828402,Tim Hortons
+USA,New York,NY,Lackawanna,-78.8453431,42.8162398,Tim Hortons
+USA,New York,NY,Lakewood,-79.3095094,42.0985551,Tim Hortons
+USA,New York,NY,Lancaster,-78.6729689,42.9159944,Tim Hortons
+USA,New York,NY,Lancaster,-78.621141,42.9238618,Tim Hortons
+USA,New York,NY,Lancaster,-78.67609709999999,42.8810469,Tim Hortons
+USA,New York,NY,Lancaster,-78.67684679999999,42.9449328,Tim Hortons
+USA,New York,NY,Lewiston,-79.0388926,43.1409443,Tim Hortons
+USA,New York,NY,Lewiston,-79.0353935,43.170675,Tim Hortons
+USA,New York,NY,Lewiston,-79.0314506,43.1714347,Tim Hortons
+USA,New York,NY,Lockport,-78.6779105,43.2195041,Tim Hortons
+USA,New York,NY,Lockport,-78.69685299999999,43.1689308,Tim Hortons
+USA,New York,NY,Lockport,-78.69756629999999,43.142205,Tim Hortons
+USA,New York,NY,Lockport,-78.6949862,43.1424829,Tim Hortons
+USA,New York,NY,Lockport,-78.6798019,43.1322759,Tim Hortons
+USA,New York,NY,Lockport,-78.7726358,43.113665,Tim Hortons
+USA,New York,NY,Lockport,-78.6455919,43.1805881,Tim Hortons
+USA,New York,NY,Massena,-74.8914302,44.9250951,Tim Hortons
+USA,New York,NY,Medina,-78.3925548,43.2074319,Tim Hortons
+USA,New York,NY,Morristown,-75.63669569999999,44.5945373,Tim Hortons
+USA,New York,NY,New Rochelle,-73.7861884,40.9175396,Tim Hortons
+USA,New York,NY,New York,-73.9924608,40.7497241,Tim Hortons
+USA,New York,NY,New York,-73.9828765,40.761083,Tim Hortons
+USA,New York,NY,Newark,-77.1141105,43.04771890000001,Tim Hortons
+USA,New York,NY,Newfane,-78.7000971,43.2754874,Tim Hortons
+USA,New York,NY,Lockport,-78.6779105,43.2195041,Tim Hortons
+USA,New York,NY,Lockport,-78.6455919,43.1805881,Tim Hortons
+USA,New York,NY,Lockport,-78.69685299999999,43.1689308,Tim Hortons
+USA,New York,NY,Niagara Falls,-78.92746710000002,43.0987181,Tim Hortons
+USA,New York,NY,Niagara Falls,-78.98685789999999,43.1088314,Tim Hortons
+USA,New York,NY,Niagara Falls,-79.02497369999999,43.0954011,Tim Hortons
+USA,New York,NY,Niagara Falls,-79.0570905,43.0866087,Tim Hortons
+USA,New York,NY,Niagara Falls,-79.0067363,43.1293592,Tim Hortons
+USA,New York,NY,Niagara Falls,-79.0498697,43.094153,Tim Hortons
+USA,New York,NY,Niagara Falls,-78.9663633,43.0912134,Tim Hortons
+USA,New York,NY,North Boston,-78.7838909,42.69237529999999,Tim Hortons
+USA,New York,NY,North Chili,-77.8068406,43.1201012,Tim Hortons
+USA,New York,NY,North Tonawanda,-78.87441559999999,43.0520147,Tim Hortons
+USA,New York,NY,North Tonawanda,-78.861858,43.035834,Tim Hortons
+USA,New York,NY,North Tonawanda,-78.8366346,43.0583405,Tim Hortons
+USA,New York,NY,Ogdensburg,-75.4627924,44.7001317,Tim Hortons
+USA,New York,NY,Olean,-78.4640335,42.0769644,Tim Hortons
+USA,New York,NY,Olean,-78.4304738,42.085387,Tim Hortons
+USA,New York,NY,Oneonta,-75.0303701,42.4476093,Tim Hortons
+USA,New York,NY,Orchard Park,-78.7858566,42.7732657,Tim Hortons
+USA,New York,NY,Orchard Park,-78.75090949999999,42.7977126,Tim Hortons
+USA,New York,NY,Orchard Park,-78.79441349999999,42.7971519,Tim Hortons
+USA,New York,NY,Orchard Park,-78.7509417,42.7956368,Tim Hortons
+USA,New York,NY,Orchard Park,-78.79117219999999,42.777868,Tim Hortons
+USA,New York,NY,Orchard Park,-78.7981276,42.7729759,Tim Hortons
+USA,New York,NY,Orchard Park,-78.7442564,42.7664059,Tim Hortons
+USA,New York,NY,Orchard Park,-78.76236490000001,42.762941,Tim Hortons
+USA,New York,NY,Oswego,-76.5405904,43.4543839,Tim Hortons
+USA,New York,NY,Pembroke,-78.406699,42.9926249,Tim Hortons
+USA,New York,NY,Penfield,-77.4366537,43.1311663,Tim Hortons
+USA,New York,NY,Pittsford,-77.47483009999999,43.0603241,Tim Hortons
+USA,New York,NY,Victor,-77.4137197,42.9990488,Tim Hortons
+USA,New York,NY,Plattsburgh,-73.466732,44.6929401,Tim Hortons
+USA,New York,NY,Potsdam,-74.96179099999999,44.6704146,Tim Hortons
+USA,New York,NY,Potsdam,-74.9752498,44.6635865,Tim Hortons
+USA,New York,NY,Raymondville,-74.9706557,44.8558404,Tim Hortons
+USA,New York,NY,Rochester,-77.5691523,43.1515955,Tim Hortons
+USA,New York,NY,Rochester,-77.616804,43.1250623,Tim Hortons
+USA,New York,NY,Rochester,-77.576565,43.1987229,Tim Hortons
+USA,New York,NY,Rochester,-77.6293895,43.1945349,Tim Hortons
+USA,New York,NY,Rochester,-77.5833495,43.0875847,Tim Hortons
+USA,New York,NY,Rochester,-77.6692489,43.1643251,Tim Hortons
+USA,New York,NY,Rochester,-77.6063765,43.0735648,Tim Hortons
+USA,New York,NY,Rochester,-77.68814669999999,43.2081461,Tim Hortons
+USA,New York,NY,Rochester,-77.6278308,43.08645130000001,Tim Hortons
+USA,New York,NY,Rochester,-77.74874,43.1060357,Tim Hortons
+USA,New York,NY,Salamanca,-78.73612949999999,42.1579786,Tim Hortons
+USA,New York,NY,Sanborn,-78.8834033,43.1430085,Tim Hortons
+USA,New York,NY,Sanborn,-78.877364,43.1471493,Tim Hortons
+USA,New York,NY,Spencerport,-77.80454329999999,43.1846614,Tim Hortons
+USA,New York,NY,Springville,-78.69070479999999,42.4993292,Tim Hortons
+USA,New York,NY,Staten Island,-74.088613,40.5903785,Tim Hortons
+USA,New York,NY,Staten Island,-74.1627827,40.6068457,Tim Hortons
+USA,New York,NY,Staten Island,-74.2343482,40.5163194,Tim Hortons
+USA,New York,NY,Syracuse,-76.2267299,43.04910659999999,Tim Hortons
+USA,New York,NY,Syracuse,-76.143682,43.1176118,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8822527,42.9962394,Tim Hortons
+USA,New York,NY,Tonawanda,-78.85802919999999,42.97467,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8231833,42.9896144,Tim Hortons
+USA,New York,NY,Tonawanda,-78.85345629999999,42.990331,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8837759,42.993002,Tim Hortons
+USA,New York,NY,Tonawanda,-78.822762,43.0138879,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8361012,42.9803726,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8227431,43.0297734,Tim Hortons
+USA,New York,NY,Tonawanda,-78.876279,43.002288,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8806805,43.0198587,Tim Hortons
+USA,New York,NY,Tonawanda,-78.8551287,43.0019283,Tim Hortons
+USA,New York,NY,Victor,-77.4177962,42.9868888,Tim Hortons
+USA,New York,NY,Victor,-77.4137197,42.9990488,Tim Hortons
+USA,New York,NY,Warsaw,-78.1315838,42.7601638,Tim Hortons
+USA,New York,NY,Watertown,-75.9459444,43.9763882,Tim Hortons
+USA,New York,NY,Watertown,-75.8745764,43.9582436,Tim Hortons
+USA,New York,NY,Watertown,-75.9067189,43.979658,Tim Hortons
+USA,New York,NY,Webster,-77.5043918,43.1876454,Tim Hortons
+USA,New York,NY,Webster,-77.4751193,43.2046691,Tim Hortons
+USA,New York,NY,West Henrietta,-77.71457939999999,43.0409157,Tim Hortons
+USA,New York,NY,Henrietta,-77.6512451,43.05826820000001,Tim Hortons
+USA,New York,NY,West Seneca,-78.7845248,42.82798409999999,Tim Hortons
+USA,New York,NY,West Seneca,-78.7537665,42.84078909999999,Tim Hortons
+USA,New York,NY,West Seneca,-78.6974008,42.8129253,Tim Hortons
+USA,New York,NY,West Seneca,-78.7868115,42.87108550000001,Tim Hortons
+USA,New York,NY,West Seneca,-78.78881460000001,42.83610789999999,Tim Hortons
+USA,New York,NY,West Seneca,-78.7735987,42.8294112,Tim Hortons
+USA,New York,NY,West Seneca,-78.7841473,42.8330199,Tim Hortons
+USA,New York,NY,Westbury,-73.5889347,40.7473151,Tim Hortons
+USA,New York,NY,White Plains,-73.7750239,41.0332677,Tim Hortons
+USA,New York,NY,Williamsville,-78.7450747,42.9499522,Tim Hortons
+USA,New York,NY,Williamsville,-78.7301425,42.9940125,Tim Hortons
+USA,New York,NY,Williamsville,-78.6931906,42.9719318,Tim Hortons
+USA,New York,NY,Williamsville,-78.7611139,42.9608764,Tim Hortons
+USA,New York,NY,Williamsville,-78.73819379999999,42.9779169,Tim Hortons
+USA,New York,NY,Williamsville,-78.7251945,42.965687,Tim Hortons
+USA,New York,NY,Williamsville,-78.7228918,42.966299,Tim Hortons
+USA,New York,NY,Williamsville,-78.69604439999999,42.9531599,Tim Hortons
+USA,New York,NY,Williamsville,-78.697515,42.982768,Tim Hortons
+USA,New York,NY,Williamsville,-78.7552934,42.9913713,Tim Hortons
+USA,North Dakota,ND,Fargo,-96.857254,46.8614807,Tim Hortons
+USA,North Dakota,ND,Fargo,-96.8633196,46.85013439999999,Tim Hortons
+USA,North Dakota,ND,Grand Forks,-97.07067420000001,47.9318132,Tim Hortons
+USA,North Dakota,ND,Grand Forks,-97.08754019999999,47.9138736,Tim Hortons
+USA,North Dakota,ND,Minot,-101.2966058,48.2580233,Tim Hortons
+USA,Ohio,OH,Amelia,-84.244288,39.0467288,Tim Hortons
+USA,Ohio,OH,Ashland,-82.292993,40.8641971,Tim Hortons
+USA,Ohio,OH,Athens,-82.0705476,39.3367226,Tim Hortons
+USA,Ohio,OH,Beavercreek,-84.0569289,39.72623919999999,Tim Hortons
+USA,Ohio,OH,Beavercreek,-84.10494419999999,39.6962595,Tim Hortons
+USA,Ohio,OH,Bellefontaine,-83.7609707,40.3547444,Tim Hortons
+USA,Ohio,OH,Bowling Green,-83.6319207,41.374187,Tim Hortons
+USA,Ohio,OH,Bowling Green,-83.6284621,41.37418599999999,Tim Hortons
+USA,Ohio,OH,Bucyrus,-82.9758803,40.8046044,Tim Hortons
+USA,Ohio,OH,Calcutta,-80.5774124,40.6729787,Tim Hortons
+USA,Ohio,OH,Cambridge,-81.5790717,40.0091499,Tim Hortons
+USA,Ohio,OH,Canal Winchester,-82.8235205,39.9118173,Tim Hortons
+USA,Ohio,OH,Canal Winchester,-82.8290043,39.8535677,Tim Hortons
+USA,Ohio,OH,Centerville,-84.1099508,39.6585504,Tim Hortons
+USA,Ohio,OH,Chillicothe,-82.9769951,39.3559582,Tim Hortons
+USA,Ohio,OH,Chillicothe,-82.9513951,39.3376147,Tim Hortons
+USA,Ohio,OH,Cincinnati,-84.5119215,39.1335294,Tim Hortons
+USA,Ohio,OH,Cincinnati,-84.598247,39.25286210000001,Tim Hortons
+USA,Ohio,OH,Circleville,-82.9538316,39.5827974,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0487861,39.973437,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0391456,39.9568976,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0263611,39.990708,Tim Hortons
+USA,Ohio,OH,Columbus,-82.97061389999999,40.0597974,Tim Hortons
+USA,Ohio,OH,Columbus,-83.00044439999999,39.9624612,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0063849,39.9693512,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9419118,39.94857409999999,Tim Hortons
+USA,Ohio,OH,Columbus,-82.96245739999999,40.14564499999999,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9505549,40.110035,Tim Hortons
+USA,Ohio,OH,Columbus,-82.87907779999999,39.9246535,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0884476,40.0652513,Tim Hortons
+USA,Ohio,OH,Columbus,-83.01198749999999,40.0183874,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9111547,40.0315406,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9150676,39.9568899,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0116918,39.9691593,Tim Hortons
+USA,Ohio,OH,Columbus,-82.96210669999999,40.0394523,Tim Hortons
+USA,Ohio,OH,Columbus,-83.03429179999999,40.0306088,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9989751,39.8878292,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9886683,39.9577763,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0197266,40.0016447,Tim Hortons
+USA,Ohio,OH,Columbus,-83.1131657,40.0015697,Tim Hortons
+USA,Ohio,OH,Columbus,-83.127601,39.9517878,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9848108,39.951942,Tim Hortons
+USA,Ohio,OH,Columbus,-82.86377039999999,40.0635592,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0183669,40.0742698,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0248064,40.0075992,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9505549,40.08629579999999,Tim Hortons
+USA,Ohio,OH,Columbus,-82.8447097,39.9762323,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0937141,39.9556223,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0359908,39.9446788,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0904482,40.0974226,Tim Hortons
+USA,Ohio,OH,Columbus,-82.82739269999999,39.9816849,Tim Hortons
+USA,Ohio,OH,Columbus,-82.9960236,40.031535,Tim Hortons
+USA,Ohio,OH,Columbus,-83.03930520000002,40.0626977,Tim Hortons
+USA,Ohio,OH,Columbus,-83.1128513,39.93637289999999,Tim Hortons
+USA,Ohio,OH,Columbus,-83.0216178,39.9570499,Tim Hortons
+USA,Ohio,OH,Columbus,-83.01754849999999,40.1351806,Tim Hortons
+USA,Ohio,OH,Columbus,-82.99328659999999,40.0872777,Tim Hortons
+USA,Ohio,OH,Coshocton,-81.8691951,40.2747918,Tim Hortons
+USA,Ohio,OH,Dayton,-84.06517389999999,39.7798465,Tim Hortons
+USA,Ohio,OH,Dayton,-84.1909635,39.8192949,Tim Hortons
+USA,Ohio,OH,Dayton,-84.2212909,39.6736833,Tim Hortons
+USA,Ohio,OH,Dayton,-84.1573377,39.65960949999999,Tim Hortons
+USA,Ohio,OH,Dayton,-84.19269349999999,39.8458671,Tim Hortons
+USA,Ohio,OH,Dayton,-84.1533388,39.72457929999999,Tim Hortons
+USA,Ohio,OH,Defiance,-84.3641038,41.284276,Tim Hortons
+USA,Ohio,OH,Delaware,-83.0715809,40.2987304,Tim Hortons
+USA,Ohio,OH,Dublin,-83.1606288,40.1037028,Tim Hortons
+USA,Ohio,OH,Dublin,-83.0911568,40.1194085,Tim Hortons
+USA,Ohio,OH,Englewood,-84.2871445,39.8634152,Tim Hortons
+USA,Ohio,OH,Fairborn,-83.9926409,39.78464760000001,Tim Hortons
+USA,Ohio,OH,Dayton,-84.06517389999999,39.7798465,Tim Hortons
+USA,Ohio,OH,Findlay,-83.6706327,41.0601503,Tim Hortons
+USA,Ohio,OH,Findlay,-83.6284421,41.0498706,Tim Hortons
+USA,Ohio,OH,Fremont,-83.1235368,41.3518489,Tim Hortons
+USA,Ohio,OH,Gahanna,-82.891058,40.018916,Tim Hortons
+USA,Ohio,OH,Gahanna,-82.8666594,40.0102447,Tim Hortons
+USA,Ohio,OH,Galion,-82.8032308,40.733827,Tim Hortons
+USA,Ohio,OH,Grove City,-83.05927229999999,39.8781443,Tim Hortons
+USA,Ohio,OH,Grove City,-83.0882683,39.8396214,Tim Hortons
+USA,Ohio,OH,Grove City,-83.0841597,39.8939244,Tim Hortons
+USA,Ohio,OH,Groveport,-82.8827706,39.8984164,Tim Hortons
+USA,Ohio,OH,Heath,-82.44300969999999,40.02871529999999,Tim Hortons
+USA,Ohio,OH,Hilliard,-83.1520646,39.988731,Tim Hortons
+USA,Ohio,OH,Hilliard,-83.116748,40.030446,Tim Hortons
+USA,Ohio,OH,Hilliard,-83.12860649999999,40.0321085,Tim Hortons
+USA,Ohio,OH,Hilliard,-83.1400433,40.0028259,Tim Hortons
+USA,Ohio,OH,Holland,-83.7120054,41.6097804,Tim Hortons
+USA,Ohio,OH,Huber Heights,-84.102074,39.86631,Tim Hortons
+USA,Ohio,OH,Lancaster,-82.5683923,39.7147939,Tim Hortons
+USA,Ohio,OH,Lancaster,-82.60786270000001,39.7228661,Tim Hortons
+USA,Ohio,OH,Lewis Center,-83.0197308,40.1594323,Tim Hortons
+USA,Ohio,OH,Lima,-84.1508303,40.7631586,Tim Hortons
+USA,Ohio,OH,Maineville,-84.21894859999999,39.3485576,Tim Hortons
+USA,Ohio,OH,Mansfield,-82.4749796,40.7762252,Tim Hortons
+USA,Ohio,OH,Ashland,-82.292993,40.8641971,Tim Hortons
+USA,Ohio,OH,Marietta,-81.44509839999999,39.416727,Tim Hortons
+USA,Ohio,OH,Marion,-83.093739,40.5806307,Tim Hortons
+USA,Ohio,OH,Marysville,-83.3915,40.2409341,Tim Hortons
+USA,Ohio,OH,Marysville,-83.35249429999999,40.2366515,Tim Hortons
+USA,Ohio,OH,Maumee,-83.6683575,41.5856333,Tim Hortons
+USA,Ohio,OH,Miamisburg,-84.240762899999993,39.6400111,Tim Hortons
+USA,Ohio,OH,Monroe,-84.3957819,39.4443726,Tim Hortons
+USA,Ohio,OH,Moraine,-84.2019529,39.7073211,Tim Hortons
+USA,Ohio,OH,Mount Vernon,-82.4547541,40.401005,Tim Hortons
+USA,Ohio,OH,New Albany,-82.82240510000001,40.0887936,Tim Hortons
+USA,Ohio,OH,New Albany,-82.7959245,40.09005519999999,Tim Hortons
+USA,Ohio,OH,Newark,-82.42908299999999,40.0745278,Tim Hortons
+USA,Ohio,OH,Oregon,-83.4858996,41.6371099,Tim Hortons
+USA,Ohio,OH,Oxford,-84.749152,39.5053083,Tim Hortons
+USA,Ohio,OH,Pataskala,-82.671318,40.0033408,Tim Hortons
+USA,Ohio,OH,Pickerington,-82.7786581,39.9086091,Tim Hortons
+USA,Ohio,OH,Piqua,-84.24776779999999,40.1470812,Tim Hortons
+USA,Ohio,OH,Plain City,-83.1889302,40.1084738,Tim Hortons
+USA,Ohio,OH,Portsmouth,-82.9952388,38.7398884,Tim Hortons
+USA,Ohio,OH,Powell,-83.08902289999999,40.1578622,Tim Hortons
+USA,Ohio,OH,Reynoldsburg,-82.83095380000002,39.9362213,Tim Hortons
+USA,Ohio,OH,Reynoldsburg,-82.8159648,39.9554143,Tim Hortons
+USA,Ohio,OH,Riverside,-84.12951249999999,39.7968263,Tim Hortons
+USA,Ohio,OH,Rossford,-83.55908289999999,41.5864637,Tim Hortons
+USA,Ohio,OH,Salem,-80.8292584,40.9012821,Tim Hortons
+USA,Ohio,OH,Sidney,-84.1751779,40.2882224,Tim Hortons
+USA,Ohio,OH,South Bloomfield,-82.9864482,39.7183547,Tim Hortons
+USA,Ohio,OH,Springboro,-84.2640529,39.5632102,Tim Hortons
+USA,Ohio,OH,Springfield,-83.8356027,39.9282538,Tim Hortons
+USA,Ohio,OH,Springfield,-83.8053951,39.9431033,Tim Hortons
+USA,Ohio,OH,Springfield,-83.7793244,39.9236268,Tim Hortons
+USA,Ohio,OH,Steubenville,-80.67870380000001,40.3747998,Tim Hortons
+USA,Ohio,OH,Sunbury,-82.86833179999999,40.243296,Tim Hortons
+USA,Ohio,OH,Sunbury,-82.931436,40.26594,Tim Hortons
+USA,Ohio,OH,Sylvania,-83.6824187,41.7161047,Tim Hortons
+USA,Ohio,OH,Tiffin,-83.2022825,41.1117684,Tim Hortons
+USA,Ohio,OH,Toledo,-83.6652,41.6529751,Tim Hortons
+USA,Ohio,OH,Toledo,-83.58806299999999,41.7064585,Tim Hortons
+USA,Ohio,OH,Toledo,-83.6166965,41.611904,Tim Hortons
+USA,Ohio,OH,Toledo,-83.62898179999999,41.691911,Tim Hortons
+USA,Ohio,OH,Toledo,-83.6755235,41.6159524,Tim Hortons
+USA,Ohio,OH,Toledo,-83.7061722,41.6742939,Tim Hortons
+USA,Ohio,OH,Troy,-84.24512530000001,40.0573367,Tim Hortons
+USA,Ohio,OH,Troy,-84.2095793,40.0419766,Tim Hortons
+USA,Ohio,OH,Upper Arlington,-83.06625509999999,40.0532931,Tim Hortons
+USA,Ohio,OH,Urbana,-83.7356684,40.1067345,Tim Hortons
+USA,Ohio,OH,Washington Court House,-83.4451381,39.5328756,Tim Hortons
+USA,Ohio,OH,Waverly,-82.9790318,39.1312531,Tim Hortons
+USA,Ohio,OH,Westerville,-82.9381396,40.1473563,Tim Hortons
+USA,Ohio,OH,Westerville,-82.8959943,40.0865936,Tim Hortons
+USA,Ohio,OH,Westerville,-82.924398299999993,40.1075423,Tim Hortons
+USA,Ohio,OH,Westerville,-82.9230173,40.1491126,Tim Hortons
+USA,Ohio,OH,Whitehall,-82.89556160000001,39.9734975,Tim Hortons
+USA,Ohio,OH,Xenia,-83.9403949,39.6843563,Tim Hortons
+USA,Ohio,OH,Zanesville,-82.0190646,39.9814245,Tim Hortons
+USA,Ohio,OH,Zanesville,-82.0190452,39.9044439,Tim Hortons
+USA,Pennsylvania,PA,Allentown,-75.4725936,40.602362,Tim Hortons
+USA,Pennsylvania,PA,Bradford,-78.61632399999999,41.97751,Tim Hortons
+USA,Pennsylvania,PA,Corry,-79.64106559999999,41.9368888,Tim Hortons
+USA,Pennsylvania,PA,Duncannon,-76.9823743,40.4476969,Tim Hortons
+USA,Pennsylvania,PA,Edinboro,-80.1332848,41.8756932,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.07675909999999,42.1247918,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.1379649,42.1022375,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.1350145,42.088572,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.084887,42.0903071,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.00160819999999,42.1475646,Tim Hortons
+USA,Pennsylvania,PA,Erie,-79.97654399999999,42.116523,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.08861189999999,42.0550418,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.0397002,42.0688725,Tim Hortons
+USA,Pennsylvania,PA,Erie,-80.0483623,42.1086803,Tim Hortons
+USA,Pennsylvania,PA,Franklin,-79.8325507,41.4045837,Tim Hortons
+USA,Pennsylvania,PA,Hallstead,-75.7398746,41.9664598,Tim Hortons
+USA,Pennsylvania,PA,Hermitage,-80.4502531,41.2350954,Tim Hortons
+USA,Pennsylvania,PA,Jefferson Township,-75.50556569999999,41.4088178,Tim Hortons
+USA,Pennsylvania,PA,Meadville,-80.1549601,41.6309532,Tim Hortons
+USA,Pennsylvania,PA,Meadville,-80.2067277,41.6215227,Tim Hortons
+USA,Pennsylvania,PA,Warren,-79.1408744,41.8434623,Tim Hortons
+USA,Pennsylvania,PA,Washington,-80.2442415,40.1651575,Tim Hortons
+USA,Pennsylvania,PA,Wilkes Barre,-75.8536022,41.2380701,Tim Hortons
+USA,West Virginia,WV,Bridgeport,-80.2305193,39.3221437,Tim Hortons
+USA,West Virginia,WV,Clarksburg,-80.3845225,39.2866179,Tim Hortons
+USA,West Virginia,WV,Clarksburg,-80.2855124,39.2616677,Tim Hortons
+USA,West Virginia,WV,Fairmont,-80.1670384,39.4426263,Tim Hortons
+USA,West Virginia,WV,Fairmont,-80.1875218,39.4289193,Tim Hortons
+USA,West Virginia,WV,Morgantown,-79.93998309999999,39.65338819999999,Tim Hortons
+USA,West Virginia,WV,Morgantown,-79.9235656,39.62175149999999,Tim Hortons
+USA,West Virginia,WV,Morgantown,-79.923424,39.6472454,Tim Hortons
+USA,West Virginia,WV,Morgantown,-80.01370399999999,39.6544365,Tim Hortons
+USA,West Virginia,WV,Morgantown,-79.89889099999999,39.6483599,Tim Hortons
+USA,West Virginia,WV,Morgantown,-79.96989289999999,39.6164042,Tim Hortons
+USA,West Virginia,WV,Morgantown,-79.9853209,39.6309601,Tim Hortons
+USA,West Virginia,WV,Parkersburg,-81.54668,39.2936156,Tim Hortons
+USA,West Virginia,WV,Parkersburg,-81.55702889999999,39.2626486,Tim Hortons
+USA,West Virginia,WV,Saint Albans,-81.8341981,38.3892829,Tim Hortons
+USA,West Virginia,WV,Vienna,-81.486147,39.312914,Tim Hortons
+USA,West Virginia,WV,Wheeling,-80.69339269999999,40.0769186,Tim Hortons
+USA,Delaware,DE,Dover,-75.4684352,39.12773,Tim Hortons
+USA,Maryland,MD,Aberdeen Proving Ground,-76.13897120000001,39.4754525,Tim Hortons
+USA,Maryland,MD,Aberdeen Proving Ground,-76.1203982,39.4632824,Tim Hortons
+USA,Virginia,VA,Norfolk,-76.2735652,36.9463,Tim Hortons

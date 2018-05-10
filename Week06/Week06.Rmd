@@ -20,47 +20,12 @@ dfTimh <- read_excel(fname, 2)
 dfDunk <- read_excel(fname, 3)
 ```
 
+
 ### Obtain TH locations
 ```{r}
-
-geocodeAdddress <- function(address) {
-  require(RJSONIO)
-  url <- "http://maps.google.com/maps/api/geocode/json?address="
-  url <- URLencode(paste(url, address, "&sensor=false", sep = ""))
-  x <- fromJSON(url, simplify = FALSE)
-  if (x$status == "OK") {
-    out <- c(x$results[[1]]$geometry$location$lng,
-             x$results[[1]]$geometry$location$lat)
-  } else {
-    cat(paste0(address, "\n"))
-    out <- NA
-  }
-  Sys.sleep(1)  # API only allows 5 requests per second
-  out
-}
-
-library(ggmap)
-TimhUS <- dfTimh %>% 
-  rename(ST = state, Country = country, City = city) %>%
-  filter(Country == "us") %>% 
-  mutate(postal_code = replace(postal_code, 
-                               nchar(postal_code) == 4, 
-                               paste0("0", postal_code))) %>% 
-  mutate(Country = "USA",
-         State = openintro::abbr2state(ST),
-         address = paste(address, City, ST, postal_code, sep = ", ")) %>% 
-  select(Country, address, State, ST, City)
-
-nTimh <- nrow(TimhUS)
-loc <- data.frame(Longitude = rep(NA, nTimh), Latitude = rep(NA, nTimh))
-for (i in 1: nTimh){
-  loc[i,] <- geocodeAdddress(TimhUS[i, "address"])
-  cat(paste0(i, "\n"))
-}
-
-#cb <- cbind(TimhUS, loc) %>% 
-#  filter(is.na(Longitude))
+TimhUS <- read_csv("TimHortons_US.csv")
 ```
+
 
 ### Data Cleaning
 ```{r fig.width = 10}
@@ -90,11 +55,8 @@ DuckUS <- dfDunk %>%
   select(Country, State, ST, City, Longitude, Latitude) %>% 
   filter(Country == "USA") %>% 
   mutate(Store = "Dunkin' Donuts")
-         
-#         Longitude = geocode(address)[0],
-#         Latitude = geocode(address)[1])
   
-SDUS <- rbind(StarUS, DuckUS)
+SDUS <- rbind(StarUS, DuckUS, TimhUS)
 avgSDUS <- SDUS %>% 
   group_by(State, Store) %>% 
   summarise(count = n(), ST = unique(ST)) %>% 
@@ -172,4 +134,44 @@ library(gridExtra)
 grid.arrange(p, t, c, ncol = 1)
 ```
 
+### Michigan
+```{r fig.width = 10}
+SDCONUS   <- filter(SDUS, ST  == "MI")
+us_map <- broom::tidy(us, region = "name") %>% filter(id == "Michigan") 
+
+m <- ggplot() +
+  geom_map(data = us_map, aes(map_id = id),
+           color="#2b2b2b", size = 0.1, fill = NA, map = us_map) + 
+  geom_point(data = SDCONUS, aes(x = Longitude, y = Latitude, color = Store), 
+             size = 1, alpha = 0.1) +
+  expand_limits(x = us_map$long, y = us_map$lat) +
+  coord_map() +
+  theme_void() +
+#  theme(legend.position = "top")+
+  ggtitle( "Coffee Stores" ) +
+  guides(colour = guide_legend(title = NULL, override.aes = list(size = 3 ))) +
+  theme(legend.position=c(.3, .3)) 
+m
+```
+
+### Manhattan
+```{r message = F, warning = F, fig.height = 10, fig.width = 10}
+library(ggmap)
+SDCONUS   <- filter(SDUS, City == "New York")
+us_map    <- broom::tidy(us, region = "name") %>% filter(id == "New York") 
+nyc_base  <- get_map("Manhattan", zoom = 12, maptype = "toner-lite")
+
+d <- nyc_base %>% 
+  ggmap() +
+  geom_point(data = SDCONUS, aes(x = Longitude, y = Latitude, color = Store, shape = Store), 
+             size = 2) +
+#  coord_map() +
+  theme_void() +
+  theme(legend.position = "top")+
+  ggtitle( "Coffee Stores in Manhattan" ) +
+  guides(shape = guide_legend(title = NULL, override.aes = list(size = 3 ))) +
+  guides(colour = guide_legend(title = NULL, override.aes = list(size = 3 ))) 
+
+d
+```
 
