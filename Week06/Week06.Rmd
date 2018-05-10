@@ -20,6 +20,48 @@ dfTimh <- read_excel(fname, 2)
 dfDunk <- read_excel(fname, 3)
 ```
 
+### Obtain TH locations
+```{r}
+
+geocodeAdddress <- function(address) {
+  require(RJSONIO)
+  url <- "http://maps.google.com/maps/api/geocode/json?address="
+  url <- URLencode(paste(url, address, "&sensor=false", sep = ""))
+  x <- fromJSON(url, simplify = FALSE)
+  if (x$status == "OK") {
+    out <- c(x$results[[1]]$geometry$location$lng,
+             x$results[[1]]$geometry$location$lat)
+  } else {
+    cat(paste0(address, "\n"))
+    out <- NA
+  }
+  Sys.sleep(1)  # API only allows 5 requests per second
+  out
+}
+
+library(ggmap)
+TimhUS <- dfTimh %>% 
+  rename(ST = state, Country = country, City = city) %>%
+  filter(Country == "us") %>% 
+  mutate(postal_code = replace(postal_code, 
+                               nchar(postal_code) == 4, 
+                               paste0("0", postal_code))) %>% 
+  mutate(Country = "USA",
+         State = openintro::abbr2state(ST),
+         address = paste(address, City, ST, postal_code, sep = ", ")) %>% 
+  select(Country, address, State, ST, City)
+
+nTimh <- nrow(TimhUS)
+loc <- data.frame(Longitude = rep(NA, nTimh), Latitude = rep(NA, nTimh))
+for (i in 1: nTimh){
+  loc[i,] <- geocodeAdddress(TimhUS[i, "address"])
+  cat(paste0(i, "\n"))
+}
+
+#cb <- cbind(TimhUS, loc) %>% 
+#  filter(is.na(Longitude))
+```
+
 ### Data Cleaning
 ```{r fig.width = 10}
 library(usmap)
@@ -48,6 +90,9 @@ DuckUS <- dfDunk %>%
   select(Country, State, ST, City, Longitude, Latitude) %>% 
   filter(Country == "USA") %>% 
   mutate(Store = "Dunkin' Donuts")
+         
+#         Longitude = geocode(address)[0],
+#         Latitude = geocode(address)[1])
   
 SDUS <- rbind(StarUS, DuckUS)
 avgSDUS <- SDUS %>% 
