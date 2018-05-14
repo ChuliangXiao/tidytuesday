@@ -36,7 +36,7 @@ We welcome all newcomers, enthusiasts, and experts to participate, but be mindfu
 
 [Carbon lets you post beautiful code directly to Twitter!](https://carbon.now.sh/)
 
-[We will use the fivethirtyeight package frequently for “tame data](https://cran.r-project.org/web/packages/fivethirtyeight/fivethirtyeight.pdf)
+[We will use the fivethirtyeight package frequently for “tame" data](https://cran.r-project.org/web/packages/fivethirtyeight/fivethirtyeight.pdf)
 
 [GitHub lets you host raw code for free!](https://github.com/)
 
@@ -75,3 +75,15 @@ We welcome all newcomers, enthusiasts, and experts to participate, but be mindfu
 [RAW DATA](https://github.com/rfordatascience/tidytuesday/blob/master/data/acs2015_county_data.csv)  
 [DataSource: census.gov](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml)  
 [Kaggle source](https://www.kaggle.com/muonneutrino/us-census-demographic-data)  
+
+### Week 6 - Global coffee-chain locations (as of 2017 or 2018)
+[RAW DATA](https://github.com/rfordatascience/tidytuesday/blob/master/data/week6_coffee_chains.xlsx)  
+[Article](http://flowingdata.com/2014/03/18/coffee-place-geography/)  
+[DataSource (Starbucks): kaggle.com](https://www.kaggle.com/starbucks/store-locations)  
+[DataSource (Tim Horton): timhortons.com](https://locations.timhortons.com/)  
+[DataSource (Dunkin Donuts): odditysoftware.com](http://www.odditysoftware.com/download/download.php?filename=dunkin-donuts.zip)  
+
+### Week 7 - Star Wars Survey (2014)
+[RAW DATA](https://github.com/fivethirtyeight/data/blob/master/star-wars-survey/StarWars.csv)  
+[Article](https://fivethirtyeight.com/features/americas-favorite-star-wars-movies-and-least-favorite-characters/)  
+[DataSource fivethirtyeight (fivethirtyeight package)](https://github.com/rudeboybert/fivethirtyeight)   
