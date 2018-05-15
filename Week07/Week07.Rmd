@@ -1,9 +1,5 @@
----
-output:
-  md_document:
-    variant: markdown_github
----
-```{r setup, include=FALSE}
+
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -15,7 +11,6 @@ library(Hmisc)
 
 ### Read in data  
 ```{r message = F, warning = F}
-setwd("/Users/cxiao/Documents/GitHub/tidytuesday/Week07")
 fname <- "../data/week7_starwars.csv"
 dfSW_raw  <- read_csv(fname, col_names = F)
 h2        <- dfSW_raw[2,]
@@ -87,14 +82,14 @@ clSW %>%
   geom_bar(stat = "identity", fill = "light blue") +
 #  scale_x_discrete(labels = nameSW) +
   labs(y = "percentage") +
-  geom_text(aes(label = perc), size = 3, vjust = 0.5) +
+  geom_text(aes(label = count), size = 3, vjust = 0.5) +
   ggtitle("People who have you seen any 'Star Wars'")
   
 ```
 
 ### Plot "Which 'Star War' Movie have you seen"
-```{r perc of each SW seen}
-clSW %>% 
+```{r perc of each SW seen, fig.width = 10}
+ms <- clSW %>% 
   select(id:SW6, gender) %>% 
   gather(SW1:SW6, key = "Episode", value = "seen") %>% 
   group_by(Episode, gender) %>% 
@@ -102,29 +97,7 @@ clSW %>%
             perc = round(count/n() * 100, 2)) %>%
   drop_na() %>% 
   ggplot(aes(x = Episode, y = perc, fill = gender)) + 
-  geom_bar(stat = "identity", position = position_dodge()) +
-  scale_x_discrete(labels = nameSW) +
-  scale_fill_discrete(name = NULL) +
-  labs(y = "percentage") +
-  geom_text(aes(label = perc), size = 3,
-            position = position_dodge(width = 1),
-            inherit.aes = T) +
-  coord_flip() +
-  ggtitle("Which 'Star War' Movie have you seen")
-  
-```
-
-### Plot "the best movie"
-```{r the best movie}
-clSW %>% 
-  select(`Han Solo`:`Yoda`, gender) %>% 
-  gather(`Han Solo`:`Yoda`, key = "charactor", value = "rank") %>% 
-  group_by(charactor, gender) %>% 
-  summarise(count = sum(charactor == 1, na.rm = T),
-            perc = round(count/n() * 100, 2)) %>%
-  drop_na() %>% 
-  ggplot(aes(x = charactor, y = perc, fill = gender)) + 
-  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.5)) +
   scale_x_discrete(labels = nameSW) +
   scale_fill_discrete(name = NULL) +
   labs(y = "percentage") +
@@ -132,13 +105,13 @@ clSW %>%
             position = position_dodge(width = 1),
             inherit.aes = T) +
   coord_flip() +
-  ggtitle("Which 'Star War' is most favorite")
-  
+  ggtitle("Which 'Star Wars' Movie have you seen")
+ms  
 ```
 
-### Plot "favorite charactor"
-```{r favorite charactor}
-clSW %>% 
+### Plot "the best movie"  
+```{r best movie, fig.width = 10}
+bm <- clSW %>% 
   select(RSW1:RSW6, gender) %>% 
   gather(RSW1:RSW6, key = "Episode", value = "seen") %>% 
   group_by(Episode, gender) %>% 
@@ -146,7 +119,7 @@ clSW %>%
             perc = round(count/n() * 100, 2)) %>%
   drop_na() %>% 
   ggplot(aes(x = Episode, y = perc, fill = gender)) + 
-  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.5)) +
   scale_x_discrete(labels = nameSW) +
   scale_fill_discrete(name = NULL) +
   labs(y = "percentage") +
@@ -154,6 +127,41 @@ clSW %>%
             position = position_dodge(width = 1),
             inherit.aes = T) +
   coord_flip() +
-  ggtitle("Which 'Star War' is most favorite")
-  
+  ggtitle("Which 'Star Wars' episode is most favorite")
+bm  
+```
+
+### Plot "favorite charactor"  
+```{r favorite charactor, fig.width = 10}
+ch <- clSW %>% 
+  select(`Han Solo`:`Yoda`, gender) %>% 
+  drop_na() %>% 
+  gather(`Han Solo`:`Yoda`, key = "charactor", value = "rank") %>% 
+  group_by(charactor, gender, rank) %>% 
+  summarise(count = n()) %>% 
+  group_by(charactor, gender) %>% 
+  mutate(perc = round(count/sum(count) * 100, 2)) %>%
+  mutate(rank = factor(rank, levels = c("Very Favorable",
+                                        "Some Favorable",
+                                        "Neutral",
+                                        "Some Unfavorable",
+                                        "Very Unfavorable",
+                                        "Unfamiliar"))) %>%
+  ggplot(aes(x = charactor, y = perc, fill = gender)) + 
+  geom_bar(stat = "identity", position = position_dodge(width = 0.5)) +
+  theme_minimal()+
+  scale_fill_discrete(name = NULL) +
+  labs(y = "percentage") +
+  coord_flip() +
+  ggtitle("Which 'Star Wars' charactor is most favorite")+
+  facet_grid(~rank)+
+  theme(legend.position = "top") 
+ch  
+```
+
+## grid
+```{r message = F, warning = F, fig.height = 10, fig.width = 10}
+library(grid)
+library(gridExtra)
+grid.arrange(bm, ch, ncol = 1)
 ```

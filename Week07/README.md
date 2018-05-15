@@ -5,10 +5,24 @@ TidyTuesday
 
 ### Week 7 - Star Wars Survey (2014)
 
-[RAW
-DATA](https://github.com/fivethirtyeight/data/blob/master/star-wars-survey/StarWars.csv)  
-[Article](https://fivethirtyeight.com/features/americas-favorite-star-wars-movies-and-least-favorite-characters/)  
-[DataSource fivethirtyeight (fivethirtyeight
-package)](https://github.com/rudeboybert/fivethirtyeight)
+[RAW DATA](https://github.com/fivethirtyeight/data/blob/master/star-wars-survey/StarWars.csv)
+[Article](https://fivethirtyeight.com/features/americas-favorite-star-wars-movies-and-least-favorite-characters/)
+[DataSource fivethirtyeight (fivethirtyeight package)](https://github.com/rudeboybert/fivethirtyeight)
 
 ------------------------------------------------------------------------
+
+### Percentage of responders who have you seen any **Star Wars** by gender
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week07/Seen.png)
+
+### Percentage of each **Star Wars** episode being seen
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week07/Episode.png)
+
+### Most favorite **Star Wars** episode
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week07/Movie.png)
+
+### Most favorite **Star Wars** charactor
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week07/Charactor.png)
