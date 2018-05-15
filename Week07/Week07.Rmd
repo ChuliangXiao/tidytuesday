@@ -1,0 +1,53 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load library  
+```{r message = F, warning = F}
+library(tidyverse)
+library(Hmisc)
+```
+
+### Read in data  
+```{r message = F, warning = F}
+setwd("/Users/cxiao/Documents/GitHub/tidytuesday/Week07")
+fname <- "../data/week7_starwars.csv"
+dfSW_raw  <- read_csv(fname, col_names = F)
+h2        <- dfSW_raw[2,]
+dfSW      <- slice(dfSW_raw, 3:n())
+names(dfSW) <- c("id", "seen", "fan", 
+                 "SW1", "SW2", "SW3", "SW4", "SW5", "SW6",
+                 "RSW1", "RSW2", "RSW3", "RSW4", "RSW5", "RSW6",
+                 h2[16:29],
+                 "shot", "ext", "fan_ext", "Star_Trek",
+                 "gender", "age", "income", "edu", "location")
+```
+
+### Clean data
+```{r}
+clSW  <- dfSW %>% 
+  mutate(seen = factor(seen, levels = c("Yes", "No"), labels = c("T", "F")),
+         fan = factor(fan, levels = c("Yes", "No"), labels = c("T", "F")),
+         ext = factor(ext, levels = c("Yes", "No"), labels = c("T", "F")),
+         fan_ext = factor(fan_ext, levels = c("Yes", "No"), labels = c("T", "F")),
+         SW1 = str_replace(SW1, "Star Wars: Episode I  The Phantom Menace", "T"),
+         SW2 = str_replace(SW2, "Star Wars: Episode II  Attack of the Clones", "T"),
+         SW3 = str_replace(SW3, "Star Wars: Episode III  Revenge of the Sith", "T"),
+         SW4 = str_replace(SW4, "Star Wars: Episode IV  A New Hope", "T"),
+         SW5 = str_replace(SW5, "Star Wars: Episode V The Empire Strikes Back", "T"),
+         SW6 = str_replace(SW6, "Star Wars: Episode VI Return of the Jedi", "T")
+         ) %>% 
+  mutate_at(vars(SW1:location), factor) %>% 
+  mutate(income = factor(income, levels = c("$0 - $24,999",
+                                            "$25,000 - $49,999",
+                                            "$50,000 - $99,999",
+                                            "$100,000 - $149,999",
+                                            "$150,000+")),
+         edu = factor(edu, levels = c("Less than high school degree",
+                                      "High school degree",
+                                      "Some college or Associate degree",
+                                      "Bachelor degree",
+                                      "Graduate degree")))
+```
+
