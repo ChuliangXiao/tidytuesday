@@ -2,3 +2,56 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Load library  
+```{r library, message = F, warning = F}
+library(tidyverse)
+library(Hmisc)
+```
+
+### Read in data  
+```{r read data, message = F, warning = F}
+fname1   <- "../data/week8_honey_production/honeyraw_1998to2002.csv"
+fname2   <- "../data/week8_honey_production/honeyraw_2003to2007.csv"
+fname3   <- "../data/week8_honey_production/honeyraw_2008to2012.csv"
+df_raw1  <- read_csv(fname1, col_names = F, skip = 9)
+df_raw2  <- read_csv(fname2, col_names = F, skip = 9)
+df_raw3  <- read_csv(fname3, col_names = F, skip = 72)
+```
+
+```{r wrangle csv 1 and 2}
+tidyfun <- function(df_raw){
+df_raw %>% 
+    drop_na()%>% 
+  filter(X3 %in% state.abb) %>% 
+  mutate_at(vars(X4:X9), as.numeric) %>% 
+  mutate(X1 = X1 + 1997,
+         X4 = X4 * 1000,
+         X6 = X4 * X5,
+         X7 = X7 * 1000,
+         X8 = X8/100,
+         X9 = X6 * X8) %>% 
+  select(-X2) %>% 
+  rename(year = X1, st = X3, numcol = X4, yieldpercol = X5,
+         totalprod = X6, stocks = X7, priceperlb = X8, prodvalue = X9)  
+}
+df_data1 <- tidyfun(df_raw1)
+df_data2 <- tidyfun(df_raw2)
+```
+
+```{r wrangle csv 3}
+names(state.abb) <- state.name   
+df_data3 <- df_raw3 %>% 
+    drop_na()%>% 
+  filter(X3 %in% state.abb) %>% 
+  mutate_at(vars(X4:X9), as.numeric) %>% 
+  mutate(X1 = X1 + 1997,
+         X4 = X4 * 1000,
+         X6 = X4 * X5,
+         X7 = X7 * 1000,
+         X8 = X8/100,
+         X9 = X6 * X8) %>% 
+  select(-X2) %>% 
+  rename(year = X1, st = X3, numcol = X4, yieldpercol = X5,
+         totalprod = X6, stocks = X7, priceperlb = X8, prodvalue = X9) 
+```
+
