@@ -69,7 +69,7 @@ df_data_all %>%
 ```
 
 
-### Top 10
+### Top 5 States
 ```{r}
 st10 <- df_data_all %>% 
   group_by(st) %>% 

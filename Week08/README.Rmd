@@ -13,3 +13,9 @@ output:
 [Bee Culture](http://www.beeculture.com/u-s-honey-industry-report-2016/)  
 
 ***  
+
+### US Honey Production (1998-2012)   
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week08/Total_Production.png)  
+
+### Honey Production of Top 5 States  
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week08/Top5_Production.png)  
