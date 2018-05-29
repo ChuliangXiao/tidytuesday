@@ -1,0 +1,15 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+# TidyTuesday  
+
+***  
+### Week 9 - Comic Book Characters   
+
+[Comic book characters](https://github.com/rfordatascience/tidytuesday/blob/master/data/week9_comic_characters.csv)  
+[FiveThirtyEight package](https://github.com/rudeboybert/fivethirtyeight)  
+[FiveThirtyEight.com](https://fivethirtyeight.com/features/women-in-comic-books/)  
+
+***  
