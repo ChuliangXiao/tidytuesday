@@ -105,7 +105,7 @@ p3
 ```
 
 #### Character Alignment by Gender
-```{r fig.width = 10, fig.height = 3}
+```{r fig.width = 10, fig.height = 4}
 describe(df_raw$align)
 # Credit to https://twitter.com/dylanjm_ds/status/1001688440524673024
 df_align <- df_raw %>% 
@@ -137,7 +137,7 @@ df_align <- df_raw %>%
                       rlab1,
                       as.character(NA))) 
 
-p4<- df_align %>% 
+p4 <- df_align %>% 
   ggplot(aes(x = fct_relevel(sex, c("Male", "Female")), y = ratio, fill = align)) + 
   geom_bar(stat = "identity", width = 0.8, position = position_stack()) + 
   geom_text(aes(y = 1, label = r1), color = "white", hjust = 0) + 
@@ -148,7 +148,8 @@ p4<- df_align %>%
   coord_flip() + 
   facet_wrap(~ publisher, ncol = 1) + 
   labs(title = "Good Girls Gone Meh",
-       subtitle = "Character alignment by gender") + 
+       subtitle = "Character alignment by gender",
+       caption = "Source: FiveThirtyEight") + 
   guides(fill = FALSE) + 
   theme_fivethirtyeight() + 
 # Left-adjust title 
@@ -159,6 +160,12 @@ p4<- df_align %>%
         # When hjust Cannot be negative for the trip.text
         panel.grid = element_blank(), 
         axis.text.x = element_blank())
-p4
+p4 +
+  annotate(geom = "text", x = 3, y = 0,   label = c("Good", NA),    
+           color = "#78a949", vjust = 0.85, hjust = 0)+
+  annotate(geom = "text", x = 3, y = 58,  label = c("Neutral", NA), 
+           color = "#f5b92b", vjust = 0.85, hjust = 0.5)+
+  annotate(geom = "text", x = 3, y = 100, label = c("Bad", NA),     
+           color = "#fc2a1c", vjust = 0.85, hjust = 1)
 ```
 

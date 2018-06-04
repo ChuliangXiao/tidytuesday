@@ -43,6 +43,8 @@ Line plot
 
 * `replace_na()` to replace `NA` 
 * `fct_relevel()` to relevel  
+* `geom_text` customization  
+* `annotate()` to add text  
 
 ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week09/Alignment.png)
 
