@@ -176,7 +176,7 @@ df_data3 &lt;- df_raw3 %&gt;%
   group_by(st) %&gt;% 
   summarise(sumprod = sum(totalprod)) %&gt;% 
   arrange(desc(sumprod)) %&gt;% 
-  ggplot(aes(x = reorder(st, sumprod), y = sumprod)) + 
+  ggplot(aes(x = fct_reorder(st, sumprod), y = sumprod)) + 
   geom_bar(stat = &quot;identity&quot;) +
   labs(x = &quot;State&quot;, y = &quot;Total Production&quot;) +
   coord_flip() +

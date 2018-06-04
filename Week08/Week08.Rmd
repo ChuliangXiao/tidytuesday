@@ -61,7 +61,7 @@ df_data_all %>%
   group_by(st) %>% 
   summarise(sumprod = sum(totalprod)) %>% 
   arrange(desc(sumprod)) %>% 
-  ggplot(aes(x = reorder(st, sumprod), y = sumprod)) + 
+  ggplot(aes(x = fct_reorder(st, sumprod), y = sumprod)) + 
   geom_bar(stat = "identity") +
   labs(x = "State", y = "Total Production") +
   coord_flip() +
