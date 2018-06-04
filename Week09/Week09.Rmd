@@ -16,7 +16,7 @@ df_raw  <- read_csv("../data/week9_comic_characters.csv")
 
 ### DC vs. Marvel by year 
 #### New Comic Book Characters Introduced Per Year  
-```{r}
+```{r fig.width = 10}
 publisher_name = c("DC, New Earth continuity", 
                    "Marvel, Earth-616 continuity")
 p1 <- df_raw %>% 
@@ -42,7 +42,7 @@ p1
 ```
 
 #### Gender Ratio by year      
-```{r}
+```{r fig.width = 10}
 p2 <- df_raw %>% 
   mutate(sex = str_replace(sex, " Characters", ""))%>% 
   count(publisher, year, sex) %>% 
@@ -72,11 +72,10 @@ p2
 
 
 #### Gender Ratio cumulated   
-```{r}
+```{r fig.width = 10}
 p3 <- df_raw %>% 
   mutate(sex = str_replace(sex, " Characters", ""))%>% 
   filter(sex %in% c("Male", "Female")) %>% 
-  filter(year >= 1939) %>% 
   count(publisher, year, sex) %>% 
   group_by(publisher, year) %>% 
   mutate(total = sum(n)) %>%
@@ -106,7 +105,7 @@ p3
 ```
 
 #### Character Alignment by Gender
-```{r}
+```{r fig.width = 10}
 describe(df_raw$align)
 # Credit to https://twitter.com/dylanjm_ds/status/1001688440524673024
 p4 <- df_raw %>% 
