@@ -13,3 +13,17 @@ output:
 [FiveThirtyEight.com](https://fivethirtyeight.com/features/women-in-comic-books/)  
 
 ***  
+
+### New Characters Introduced per Year    
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week09/New_Characters.png)
+### Ration of New Female Characters Introduced per Year    
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week09/Female_Characters.png)
+
+### Ration of Female Charaters Evolving with Year       
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week09/Female_Characters_Cumulated.png)
+
+### Character Alignment by Gender      
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week09/Alignment.png)
+
+
+
