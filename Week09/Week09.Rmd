@@ -1,0 +1,145 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load library  
+```{r library, message = F, warning = F}
+library(tidyverse)
+library(Hmisc)
+library(ggthemes)
+```
+
+### Read in data  
+```{r read data, message = F, warning = F}
+df_raw  <- read_csv("../data/week9_comic_characters.csv")
+```
+
+### DC vs. Marvel by year 
+#### New Comic Book Characters Introduced Per Year  
+```{r}
+publisher_name = c("DC, New Earth continuity", 
+                   "Marvel, Earth-616 continuity")
+p1 <- df_raw %>% 
+  group_by(publisher, year) %>% 
+  summarise(count = n()) %>% 
+  ungroup() %>% 
+  mutate(publisher = factor(publisher, labels = publisher_name))%>% 
+  ggplot(aes(x = year, y = count, fill = publisher)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("blue", "red"))+
+  scale_y_continuous(labels = seq(0,500,100),
+                     breaks = seq(0,500,100)) +
+  scale_x_continuous(labels = c(1940, "'60", "'80", 2000),
+                     breaks = seq(1940,2000,20)) + 
+#  ggtitle("New Comic Book Characters Introduced Per Year")+
+  labs(title = "New Comic Book Characters Introduced Per Year",
+       caption = "Source: FiveThirtyEight")+
+  facet_wrap(~ publisher) +
+  theme_fivethirtyeight() +
+  theme(strip.text.x = element_text(size = 15))+
+  theme(legend.position = "none") 
+p1
+```
+
+#### Gender Ratio by year      
+```{r}
+p2 <- df_raw %>% 
+  mutate(sex = str_replace(sex, " Characters", ""))%>% 
+  count(publisher, year, sex) %>% 
+  group_by(publisher, year) %>% 
+  mutate(total = sum(n)) %>%
+  mutate(ratio = n / total * 100) %>% 
+  filter(sex == "Female") %>% 
+  ggplot(aes(x = year, y = ratio, group = publisher, color = publisher)) +
+  geom_line() +
+  geom_text(aes(x = 2002, y = 25, label = "Marvel"), 
+            color = "red", size = 5) + 
+  geom_text(aes(x = 2001, y = 44, label = "DC"), 
+            color = "blue", size = 5) + 
+  scale_x_continuous(limits = c(1980, 2013),
+                     labels = c(1980, "'90", 2000, "'10")) + 
+  scale_y_continuous(labels = c(seq(0,40,10), "50%"),
+                     breaks = seq(0,50,10),
+                     limits = c(0,50)) + 
+  scale_color_manual(values = c("blue", "red")) +
+  labs(title = "Comics Aren't Gaining Many Female Characters",
+       subtitle = "Percentage of new characters who are female",
+       caption = "Source: FiveThirtyEight") +
+  theme_fivethirtyeight() +
+  theme(legend.position = "none") 
+p2
+```
+
+
+#### Gender Ratio cumulated   
+```{r}
+p3 <- df_raw %>% 
+  mutate(sex = str_replace(sex, " Characters", ""))%>% 
+  filter(sex %in% c("Male", "Female")) %>% 
+  filter(year >= 1939) %>% 
+  count(publisher, year, sex) %>% 
+  group_by(publisher, year) %>% 
+  mutate(total = sum(n)) %>%
+  filter(sex == "Female") %>% 
+  group_by(publisher) %>% 
+  mutate(cum_hero = cumsum(total),
+         cum_female = cumsum(n),
+         ratio = cum_female/cum_hero * 100) %>% 
+  ggplot(aes(x = year, y = ratio, group = publisher, color = publisher)) + 
+  geom_line() + 
+  geom_text(aes(x = 1992, y = 15, label = "Marvel"),
+            color = "red", size = 5) + 
+  geom_text(aes(x = 1990, y = 30, label = "DC"), 
+            color = "blue", size = 5) +
+  scale_y_continuous(limits = c(0,50),
+                     labels = c(seq(0,40,10), "50%")) + 
+  scale_x_continuous(limits = c(1939, 2013),
+                     labels = c(1940, glue::glue("'{seq(50,90,10)}"), 2010, "'10"),
+                     breaks = seq(1940,2010, 10)) + 
+  scale_color_manual(values = c("blue", "red")) +
+  labs(title = "The Gender Ratio In Comic Books Is Improving",
+       subtitle = "Percentage of total characters in universe who are female",
+       caption = "Source: FiveThirtyEight") + 
+  guides(color = FALSE) + 
+  theme_fivethirtyeight() 
+p3
+```
+
+#### Character Alignment by Gender
+```{r}
+describe(df_raw$align)
+# Credit to https://twitter.com/dylanjm_ds/status/1001688440524673024
+p4 <- df_raw %>% 
+  filter(alive == "Living Characters") %>% 
+  mutate(sex = str_replace(sex, " Characters", ""),
+         align = str_replace(align, " Characters", ""),
+         align = replace_na(align, "Neutral")) %>% 
+  filter(sex %in% c("Female", "Male")) %>% 
+  group_by(publisher, sex, align) %>% 
+  summarise(count = n()) %>% 
+  group_by(publisher, sex) %>% 
+  mutate(total = sum(count),
+         ratio = count/total * 100,
+         align = fct_relevel(align, c("Bad", "Neutral", "Good"))) %>% 
+  filter(align != "Reformed Criminals") %>% 
+  ggplot(aes(x = fct_relevel(sex, c("Male", "Female")),
+             y = ratio, fill = align)) + 
+  geom_bar(stat = "identity", width = .3, position = position_stack()) + 
+  geom_text(aes(label = glue::glue("{round(ratio)}%")),
+            color = "white", position = position_stack(vjust = .5)) + 
+  scale_fill_manual(values = c("#fc2a1c", "#f5b92b", "#78a949")) + 
+  scale_x_discrete(labels = c("Male", "Female")) + 
+  coord_flip() + 
+  facet_wrap(~ publisher, ncol = 1) + 
+  labs(title = "Good Girls Gone Meh",
+       subtitle = "Character alignment by gender") + 
+  guides(fill = FALSE) + 
+  theme_fivethirtyeight() + 
+  theme(panel.grid = element_blank(), 
+        axis.text.x = element_blank())
+p4
+```
+
+
+
+
