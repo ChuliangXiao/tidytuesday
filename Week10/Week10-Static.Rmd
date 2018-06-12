@@ -57,7 +57,7 @@ p1 <- ggmap(portland) +
   geom_point(data = top_df, 
              aes(x = StartLongitude, y = StartLatitude, size = n),
              color = "white", fill = "#f94d1f", shape = 21) + 
-  scale_x_continuous(limits=c(-122.72, -122.62))+
+  scale_x_continuous(limits=c(-122.71, -122.63))+
   labs(title = "Starting Stations") + 
   theme_minimal() + 
   theme(axis.text = element_blank(),
@@ -90,8 +90,7 @@ p2 <- trip_df %>%
   theme(panel.grid.minor = element_blank(),
         panel.grid.major.x = element_blank(),
         axis.title = element_blank(),
-        plot.title = element_text(family = "Verdana Bold", 
-                                  size = 10, margin = margin(b = 20)),
+        plot.title = element_text(family = "Verdana Bold", size = 10),
         axis.text = element_text(family = "Futura Medium", size = 10))
 ```
 
@@ -131,11 +130,12 @@ p4 <- trip_df %>%
   theme(legend.position = "none",
         axis.title = element_blank(),
         panel.grid = element_blank(), 
-        axis.text.y = element_text(margin = margin(r = 20)),
+        axis.text.y = element_text(margin = margin(r = 0)),
         plot.title = element_text(family = "Verdana Bold", size = 10),
         axis.text = element_text(family = "Futura Medium"))
 ```
 
+##### `patchwork`
 ```{r }
 pp <- p1 + 
   (p2 + p3 + p4 + plot_layout(ncol = 1, heights = c (3, 2, 7))) + 
