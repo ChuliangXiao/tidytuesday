@@ -17,7 +17,7 @@ trip_df<- raw_df %>%
   mutate(StartDate = mdy(StartDate),
          EndDate = mdy(EndDate),
          Start = parse_date_time(glue("{StartDate} {StartTime}"), "Ymd HMS"),
-         Hour = parse_factor(hour(Start), c(0,23:1)),
+         Hour = parse_factor(hour(Start), c(0, 23:1)),
          Weekday = fct_relevel(wday(Start, label = TRUE),
                                c("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
                                ),
@@ -57,7 +57,7 @@ p1 <- ggmap(portland) +
   geom_point(data = top_df, 
              aes(x = StartLongitude, y = StartLatitude, size = n),
              color = "white", fill = "#f94d1f", shape = 21) + 
-  scale_x_continuous(limits=c(-122.71, -122.63))+
+  scale_x_continuous(limits = c(-122.71, -122.63))+
   labs(title = "Starting Stations") + 
   theme_minimal() + 
   theme(axis.text = element_blank(),
@@ -73,15 +73,16 @@ p1
 ```{r}
 p2 <- trip_df %>% 
   mutate(floor_week = floor_date(Start, "weeks")) %>% 
-  add_count(floor_week, PaymentPlan) %>% 
-  add_count(floor_week) %>% 
+  count(floor_week, PaymentPlan) %>% 
+  group_by(floor_week) %>% 
+  mutate(nn = sum(n)) %>% 
   filter(PaymentPlan %in% "Subscriber") %>% 
   ggplot() + 
   geom_ribbon(aes(x = floor_week, ymin = 0, ymax = nn), 
               fill = "grey", color = "grey50") +
   geom_ribbon(aes(x = floor_week, ymin = 0, ymax = n),
               fill = "#f69366", color = "grey50") +
-  scale_y_continuous(labels = glue::glue("{seq(0,15,5)}K")) + 
+  scale_y_continuous(labels = glue("{seq(0,15,5)}K")) + 
   scale_x_datetime(date_labels = "%b %y", 
                    breaks = seq(as_datetime("2016-08-01"), 
                                 as_datetime("2018-02-01"), "6 months")) + 
@@ -105,7 +106,7 @@ p3 <- ggplot() +
 #  scale_x_continuous(name="x") + 
 #  scale_y_continuous(name="y") +
   geom_rect(d, mapping = aes(xmin = x1, xmax = x2, ymin = y1, ymax = y2),
-            fill = "white", color="black", alpha=0.5) +
+            fill = "white", color = "black", alpha = 0.5) +
   geom_text(d, mapping = aes(x = (x1+x2)/2, y = (y1+y2)/2, label = txt), size = 3) +
   coord_fixed()+
   theme_void()
@@ -123,7 +124,7 @@ p4 <- trip_df %>%
   annotate("segment", y = 0, yend = 0, x = -Inf, xend = Inf,
            color = "black", size = .3) +
   scale_x_discrete(position = "top") + 
-  scale_y_discrete(labels = c("12 AM",glue("{c(11:1,12)} PM"), glue("{11:5} AM"))) +
+  scale_y_discrete(labels = c("12 AM",glue("{c(11:1, 12)} PM"), glue("{11:5} AM"))) +
   scale_fill_gradient(low = "white", high = "#f94d1f") + 
   labs(title = "Trips per Weekday/Hour") + 
   theme_minimal() + 
