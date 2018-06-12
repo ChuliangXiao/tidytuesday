@@ -21,3 +21,11 @@ output:
 
 ***  
 
+#### `tidyverse` practice in this week   
+
+* `patchwork` to grid plots  
+* `ggmap` with non-square map   
+* `glue` to combine columns    
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week10/Bike.png)
+

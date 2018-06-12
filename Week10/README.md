@@ -3,11 +3,14 @@ TidyTuesday
 
 ------------------------------------------------------------------------
 
-### Week 9 - Comic Book Characters
+### Week 10 - Biketown Bikeshare
 
-[Biketown Bikeshare tidy](https://github.com/rfordatascience/tidytuesday/blob/master/data/week10_biketown.zip)
+[Biketown Bikeshare
+tidy](https://github.com/rfordatascience/tidytuesday/blob/master/data/week10_biketown.zip)
 
-[RAW DATA](https://github.com/rfordatascience/tidytuesday/blob/master/data/week10_biketown_raw.zip)
+[RAW
+DATA](https://github.com/rfordatascience/tidytuesday/blob/master/data/week10_biketown_raw.zip)
+
 [BiketownPDX](https://www.biketownpdx.com/system-data)
 
 [Biketown](https://www.biketownpdx.com/system-data)
@@ -15,3 +18,11 @@ TidyTuesday
 [cascadiaRconf/cRaggy](https://cascadiarconf.com/agenda/#craggy)
 
 ------------------------------------------------------------------------
+
+#### `tidyverse` practice in this week
+
+-   `patchwork` to grid plots  
+-   `ggmap` with non-square map  
+-   `glue` to combine columns
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week10/Bike.png)
