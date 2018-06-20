@@ -79,6 +79,6 @@ treemap2 <- raw_df %>%
 # ggplotly(treeplot2) 
 # ggplotly not supported
 # https://github.com/ropensci/plotly/issues/1031
-ggsave("FAFA_TV.png", treemap2, height = 8, width = 10, units = "in", dpi = 300)
+ggsave("FIFA_TV.png", treemap2, height = 8, width = 10, units = "in", dpi = 300)
 ```
 

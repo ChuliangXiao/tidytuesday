@@ -8,8 +8,8 @@ output:
 ***  
 ### Week 11 - FIFA Word Cup
 
-[FIFA World Cup Audience](https://github.com/rfordatascience/tidytuesday/blob/master/data/week11_fifa_audience.csv)  
-[FiveThirtyEight package](https://github.com/rudeboybert/fivethirtyeight)  
+[FIFA World Cup Audience](https://github.com/rfordatascience/tidytuesday/blob/master/data/week11_fifa_audience.csv)    
+[FiveThirtyEight package](https://github.com/rudeboybert/fivethirtyeight)    
 [FiveThirtyEight.com](https://fivethirtyeight.com/features/how-to-break-fifa/)  
 
 ------------------------------------------------------------------------
@@ -25,7 +25,7 @@ read_csv("../data/week11_fifa_audience.csv") %>%
   arrange(desc(gdp_weighted_share)) %>% 
 #  rename(rank = X1) %>% 
   top_n(38) %>% 
-  kable(format = "markdown",
+  kable(format = "html",
         col.names = c("Rank", "COUNTRY", "BODY",
                       "GLOBAL\nPOPULATION",
                       "WORLD CUP TV\nAUDIENCE",
