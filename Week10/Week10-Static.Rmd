@@ -7,7 +7,7 @@ library(ggmap)
 library(patchwork)
 ```
 
-##### Tidy time 
+##### Tidy time columns 
 ```{r}
 raw_df <- read_csv("../data/week10_biketown.csv")
 
@@ -69,7 +69,7 @@ p1
 #ggsave("map.png", p, width = 3, height = 6)
 ```
 
-##### plot 2: line
+##### Plot 2: Line with `geom_ribbon`
 ```{r}
 p2 <- trip_df %>% 
   mutate(floor_week = floor_date(Start, "weeks")) %>% 
@@ -95,7 +95,7 @@ p2 <- trip_df %>%
         axis.text = element_text(family = "Futura Medium", size = 10))
 ```
 
-##### Plot 3: Box
+##### Plot 3: Box with `geom_text`
 ```{r}
 d <- data.frame(x1 = c(0, 1.1), x2 = c(1, 2.1), y1 = c(0, 0), y2 = c(1, 1)/2,
                 txt = c(paste0("Number of Trips\n", ntrip),
@@ -112,7 +112,7 @@ p3 <- ggplot() +
   theme_void()
 ```
 
-##### Plot 4: Tile
+##### Plot 4: X-Y Tile
 ```{r}
 p4 <- trip_df %>% 
   count(Weekday, Hour) %>%
