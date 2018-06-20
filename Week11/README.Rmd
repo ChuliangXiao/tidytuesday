@@ -1,0 +1,40 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+# TidyTuesday  
+
+***  
+### Week 11 - FIFA Word Cup
+
+[FIFA World Cup Audience](https://github.com/rfordatascience/tidytuesday/blob/master/data/week11_fifa_audience.csv)  
+[FiveThirtyEight package](https://github.com/rudeboybert/fivethirtyeight)  
+[FiveThirtyEight.com](https://fivethirtyeight.com/features/how-to-break-fifa/)  
+
+------------------------------------------------------------------------
+
+#### `tidyverse` practice in this week
+
+##### Table with `kableExtra`  
+```{r Color Table, echo = F, message = F, warning = F}
+library(tidyverse)
+library(kableExtra)
+
+read_csv("../data/week11_fifa_audience.csv") %>% 
+  arrange(desc(gdp_weighted_share)) %>% 
+#  rename(rank = X1) %>% 
+  top_n(38) %>% 
+  kable(format = "markdown",
+        col.names = c("Rank", "COUNTRY", "BODY",
+                      "GLOBAL\nPOPULATION",
+                      "WORLD CUP TV\nAUDIENCE",
+                      "GDP-WEIGHTED\nAUDIENCE")) %>% 
+  add_header_above(c(" " = 3, "IN 2010, SHARE OF ..." = 3)) %>% 
+  column_spec(6, background = "#F5F5F5") %>% 
+  kable_styling()
+
+```
+
+##### Treemap with `treemapify`  
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week11/FIFA_TV.png)
