@@ -13,3 +13,10 @@ package](https://github.com/rudeboybert/fivethirtyeight)
 ————————————————————————
 
 #### `tidyverse` practice in this week
+
+-   Time series with `lubridate`  
+-   Annonate text with `geom_text`
+
+##### Area plotswith `geom_ribbons`
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week12/Hurricane.png)

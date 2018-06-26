@@ -13,5 +13,9 @@ output:
 [FiveThirtyEight.com](https://fivethirtyeight.com/features/the-media-really-has-neglected-puerto-rico/)   
 ------------------------------------------------------------------------
 
-#### `tidyverse` practice in this week
+#### `tidyverse` practice in this week  
+* Time series with `lubridate`  
+* Annonate text with `geom_text`  
 
+##### Area plotswith `geom_ribbons`  
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week12/Hurricane.png)

@@ -1,0 +1,103 @@
+
+#### Load library
+```{r message = F, warning = F}
+library(tidyverse)
+library(ggthemes)
+library(kableExtra)
+library(patchwork)
+```
+
+### Read in Data
+```{r message = F, warning = F}
+raw_df1 <- read_csv("../data/week12_mediacloud_hurricanes.csv")
+raw_df2 <- read_csv("../data/week12_mediacloud_states.csv")
+raw_df3 <- read_csv("../data/week12_mediacloud_top_online_news.csv")
+```
+
+
+### Time column
+```{r}
+library(lubridate)
+df1 <- raw_df1 %>% 
+  select(-Jose) %>% 
+  mutate(Date = mdy(Date)) %>% 
+  gather(key = "key", value = "value", -Date) %>% 
+  mutate(type = "Hurricane", color = key) 
+
+df2 <- raw_df2 %>% 
+  mutate(Date = mdy(Date)) %>%
+  rename("Puerto Rico" = '"Puerto Rico"') %>% 
+  gather(key = "key", value = "value", -Date) %>% 
+  mutate(type = "State")%>% 
+  mutate (color = case_when(key == "Texas" ~ "Harvey",
+                            key == "Florida" ~ "Irma",
+                            key == "Puerto Rico" ~ "Maria"))
+
+hurr_state_df <- bind_rows(df1, df2)
+```
+
+### Color Table
+```{r Color Table}
+p1 <- hurr_state_df %>% 
+  ggplot() + 
+  geom_ribbon(aes(x = Date, ymin = 0, ymax = value, fill = color), 
+              color = "grey50")  +
+  scale_y_continuous(breaks = seq(0, 4000, 1000),
+                     labels = seq(0, 4000, 1000)) + 
+  scale_x_date(date_labels = "%b %d",
+               limits = c(as_date("2017-08-20"), as_date("2017-09-24")),
+               breaks = seq(as_date("2017-08-20"), 
+                            as_date("2017-09-17"), "1 week")) + 
+  facet_wrap(~ type) + 
+  theme_minimal() +
+  theme(legend.position = "none",
+        strip.background = element_blank(),
+        strip.text.x = element_blank()) +
+  labs(y = "Sentences per day",
+       x = NULL,
+       caption = "Source: FiveThirtyEight") 
+```
+
+
+#### Add texts
+```{r}
+txt <- tribble(
+    ~tim, ~cnt, ~lab, ~type,
+    "2017-08-30", 2700, "Harvey", "Hurricane",
+    "2017-09-10", 2700, "Irma", "Hurricane",
+    "2017-09-20", 800, "Maria", "Hurricane",
+    "2017-08-24", 4000, "Texas", "State",
+    "2017-09-07", 3700, "Florida", "State",
+    "2017-09-20", 1700, "Puerto Rico", "State"
+  )
+txt <- mutate(txt, tim = as_date(tim))
+
+pp1 <- p1 + 
+  geom_text(data = txt, aes(x = tim, y = cnt, label = lab))
+
+ggsave("Hurricane.png", pp1, height = 5, width = 10, units = "in", dpi = 300)
+```
+
+
+### Single plot
+```{r}
+g1 <- raw_df1 %>% 
+  mutate(Date = mdy(Date)) %>%  
+  ggplot() + 
+  geom_ribbon(aes(x = Date, ymin = 0, ymax = Harvey), 
+              fill = "orange", color = "grey50") +
+  geom_ribbon(aes(x = Date, ymin = 0, ymax = Irma), 
+              fill = "red", color = "grey50") +
+  geom_ribbon(aes(x = Date, ymin = 0, ymax = Maria), 
+              fill = "blue", color = "grey50") +
+  theme_minimal() +
+  labs(y = "Sentences per day") +
+  scale_y_continuous(limits = c(0, 4000),
+                     breaks = seq(0, 4000, 1000),
+                     labels = seq(0, 4000, 1000)) + 
+  scale_x_date(date_labels = "%b %d",
+               breaks = seq(as_date("2017-08-20"), 
+                            as_date("2018-09-17"), "1 week"))
+```
+
+
