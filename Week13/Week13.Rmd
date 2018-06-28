@@ -1,0 +1,64 @@
+
+#### Load library
+```{r message = F, warning = F}
+library(tidyverse)
+library(kableExtra)
+library(ggthemes)
+library(patchwork)
+```
+
+#### Read in Data
+```{r message = F, warning = F}
+raw_df <- read_csv("../data/week13_alcohol_global.csv")
+```
+
+
+#### Alcohol Rank
+```{r message = F, warning = F}
+top10 <- function(df, col){
+  quo_col <- enquo(col)
+  df %>% 
+  select(country, !!quo_col) %>% 
+  arrange(desc(!!quo_col)) %>% 
+  top_n(10) %>% 
+  rename(servings = !!quo_col)
+}
+
+beer    <- top10(raw_df, beer_servings)
+spirit  <- top10(raw_df, spirit_servings)
+wine    <- top10(raw_df, wine_servings)
+
+#beer    <- top10(raw_df, beer_servings) %>% mutate(alcohol = "Beer")
+#spirit  <- top10(raw_df, spirit_servings) %>% mutate(alcohol = "Spirit")
+#wine    <- top10(raw_df, wine_servings) %>% mutate(alcohol = "Wine")
+
+alcohol <- bind_cols(beer, spirit, wine) %>% as.data.frame()
+rownames(alcohol) <- paste0(" ", 1:10)
+```
+
+#### Who Drinks The Most Beer, Spirit, And Wine?  
+#### `tableGrob`   
+```{r tableGrob, message = F, warning = F}
+library(grid)
+library(gridExtra)
+rownames(beer) <- paste0(" ", 1:10)
+t1 <- tableGrob(beer,   cols = c("", "BEER"))
+t2 <- tableGrob(spirit, cols = c("", "SPIRIT"), rows = NULL)
+t3 <- tableGrob(wine,   cols = c("", "Wine"),  rows = NULL)
+grid.arrange(t1, t2, t3, widths = c(10, 9, 9),
+             top = textGrob('Top 10 countries by servings consumed per person, 2010',
+                            gp = gpar(fontsize = 16),
+                            hjust = 0.55,  vjust = 5)
+             )
+
+```
+
+##### `kableExtra`  
+```{r kableExtra}
+alcohol %>% 
+  kable("html", caption = "Top 10 counties by servings consumed per person, 2010",
+        col.names = c("", "BEER", "", "SPIRIT", "", "WINE")) %>% 
+  kable_styling("striped", full_width = F, position = "left") 
+```
+
+

@@ -1,0 +1,24 @@
+TidyTuesday
+===========
+
+------------------------------------------------------------------------
+
+### Week 13 - Alcohol Consumption
+
+[Alcohol
+Consumption](https://github.com/rfordatascience/tidytuesday/tree/master/data)  
+[FiveThirtyEight
+package](https://github.com/rudeboybert/fivethirtyeight)  
+[FiveThirtyEight.com](https://fivethirtyeight.com/features/dear-mona-followup-where-do-people-drink-the-most-beer-wine-and-spirits/)
+
+------------------------------------------------------------------------
+
+#### `tidyverse` practice in this week
+
+##### `gridExtra::tableGrob` and `grid::textGrob`
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week13/Table1.png)
+
+#### `kableExtra`
+
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week13/Table2.png)
