@@ -15,10 +15,8 @@ package](https://github.com/rudeboybert/fivethirtyeight)
 
 #### `tidyverse` practice in this week
 
-##### `gridExtra::tableGrob` and `grid::textGrob`
+-   png format with `gridExtra::tableGrob` and `grid::textGrob`  
+    ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week13/Table1.png)
 
-![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week13/Table1.png)
-
-#### `kableExtra`
-
-![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week13/Table2.png)
+-   html format with `kableExtra`  
+    ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week13/Table2.png)
