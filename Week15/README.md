@@ -11,7 +11,7 @@
 
 ### `geofacet` map
 
-![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week15/top5_State.png)
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week15/top5_state.png)
 
 ### Gradient Density Ridge with `ggridges` package
 
