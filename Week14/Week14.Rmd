@@ -34,7 +34,7 @@ map_df <- raw_df %>%
 
 ##### Problem using st_as_sf with non-closed polygons
 ```r
-# https://github.com/r-spatial/mapedit/issues/48
+# https://github.com/r-spatial/sf/issues/430
 worldmap <- st_as_sf(rworldmap::getMap())
 ```
 
@@ -120,7 +120,7 @@ g <- map_df %>%
 
 
 animation::ani.options(interval = 1/8)
-gganimate(g, "life_expectancy.gif", title_frame = T, ani.width = 1200,ani.height = 1000)
+gganimate(g, "life_expectancy.gif", title_frame = T, ani.width = 1200,ani.height = 800)
 ```
 
 
