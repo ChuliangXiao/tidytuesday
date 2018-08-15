@@ -36,7 +36,7 @@ map_df <- raw_df %>%
 ##### Problem using st\_as\_sf with non-closed polygons
 
 ``` r
-# https://github.com/r-spatial/mapedit/issues/48
+# https://github.com/r-spatial/sf/issues/430
 worldmap <- st_as_sf(rworldmap::getMap())
 ```
 
@@ -52,7 +52,7 @@ worldmap <- rnaturalearth::ne_download(scale = 110,
 ```
 
     ## OGR data source with driver: ESRI Shapefile 
-    ## Source: "/private/var/folders/5z/0c4j3v1s5tn2wzgy_t7b58lw0000gn/T/Rtmp1etNzT", layer: "ne_110m_admin_0_countries"
+    ## Source: "/private/var/folders/5z/0c4j3v1s5tn2wzgy_t7b58lw0000gn/T/RtmpgQ4nYL", layer: "ne_110m_admin_0_countries"
     ## with 177 features
     ## It has 94 fields
     ## Integer64 fields read as strings:  POP_EST NE_ID
@@ -146,5 +146,5 @@ g <- map_df %>%
 
 
 animation::ani.options(interval = 1/8)
-gganimate(g, "life_expectancy.gif", title_frame = T, ani.width = 1200,ani.height = 1000)
+gganimate(g, "life_expectancy.gif", title_frame = T, ani.width = 1200,ani.height = 800)
 ```

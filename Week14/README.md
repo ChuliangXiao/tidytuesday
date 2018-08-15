@@ -9,9 +9,9 @@
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------- |
 | [Global Life Expectancy](https://github.com/rfordatascience/tidytuesday/tree/master/data) | [ourworldindata.org](https://ourworldindata.org/) | [ourworldindata.org](https://ourworldindata.org/life-expectancy) |
 
-### Simple Feature `sf`
+### `geom_sf` with *Simple Feature* `sf` class
 
-  - Get world map in sf with `rnaturalearth::ne_download`  
+  - Get world map in `sf` with `rnaturalearth::ne_download`  
 
 <!-- end list -->
 
@@ -25,7 +25,9 @@ worldmap <- rnaturalearth::ne_download(scale = 110,
   select(SOVEREIGNT, SOV_A3, ADMIN, ADM0_A3, geometry)
 ```
 
-  - Convert `map` class to `sf`
+Other two methods see some problems as following.
+
+  - Convert `maps::map()` class to `sf`
       - Lots of mismatches between map and data
 
 <!-- end list -->
@@ -51,8 +53,9 @@ cnty1$country
     ## [15] "United States"                    "United States Virgin Islands"    
     ## [17] "World"
 
-  - Problem using st\_as\_sf with non-closed polygons [`sf`
-    issue](https://github.com/r-spatial/mapedit/issues/48)
+  - Convert `sp` polygon to `sf`
+      - Problem using `st_as_sf` with non-closed polygons [`sf`
+        issue](https://github.com/r-spatial/sf/issues/430)
 
 <!-- end list -->
 
