@@ -36,3 +36,4 @@ vignettes/*.pdf
 # Week 10, large csv
 data/week10_biketown.csv
 Week10/*.rds
+data/week20
