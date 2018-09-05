@@ -3,11 +3,11 @@
 
 -----
 
-### Week 21 - California Fires
+### Week 20 - Russian Troll Tweets
 
-| Data                                                                                       | Source                                                                  | Article                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [California Fires](https://github.com/rfordatascience/tidytuesday/tree/master/data/week21) | [BuzzFeed.com](https://github.com/BuzzFeedNews/2018-07-wildfire-trends) | [BuzzFeed News - California Fires](https://www.buzzfeednews.com/article/peteraldhous/california-wildfires-people-climate), [RMarkdown](https://buzzfeednews.github.io/2018-07-wildfire-trends/) |
+| Data                                                                            | Source                                                                         | Article                                                                                                             |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| [Russian Troll Tweets](https://github.com/fivethirtyeight/russian-troll-tweets) | [FiveThirtyEight.com](https://github.com/fivethirtyeight/russian-troll-tweets) | [538 - Russian Troll Tweets](https://fivethirtyeight.com/features/why-were-sharing-3-million-russian-troll-tweets/) |
 
   - `data.table` read large csv files
 
@@ -20,6 +20,4 @@ DT <- do.call(rbind, lapply(files[-5], fread))
 ```
 
   - `gghightlight`  
-    ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week20/total.png)
-
-![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week20/cat4.png)
+    ![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week20/cat4.png)
