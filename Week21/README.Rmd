@@ -1,0 +1,15 @@
+---
+output: github_document
+always_allow_html: yes
+---
+# TidyTuesday  
+
+***  
+### Week 21 - California Fires        
+|	Data| Source |Article |
+|----|----|----|
+| [California Fires](https://github.com/rfordatascience/tidytuesday/tree/master/data/week21) | [BuzzFeed.com](https://github.com/BuzzFeedNews/2018-07-wildfire-trends) | [BuzzFeed News - California Fires](https://www.buzzfeednews.com/article/peteraldhous/california-wildfires-people-climate), [RMarkdown](https://buzzfeednews.github.io/2018-07-wildfire-trends/)|  
+
+* `rvest`: scrape tables from websites  
+* `gganimate`: ggplot(aes(`frame = fire_cause)`)  
+![](https://raw.githubusercontent.com/ChuliangXiao/tidytuesday/master/Week21/fire_cause.gif) 
