@@ -106,7 +106,7 @@ major_gender %>%
 ```
 
 
-```{r fig.width=10}
+```{r arning=F, message=F, fig.width=10}
 library(plotly)
 g <- major_df%>%
   mutate(Major_category = fct_lump(Major_category, 4)) %>%
@@ -117,6 +117,6 @@ g <- major_df%>%
   scale_x_continuous(labels = percent_format()) +
   scale_y_continuous(labels = dollar_format()) +
   expand_limits(y = 0)
-ggplotly(g)
+# ggplotly(g) # Not supported by GitHub
 ```
 
